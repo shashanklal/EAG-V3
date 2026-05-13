@@ -1,0 +1,539 @@
+claim_id,event_id,event_seq,event_type,event_ts,event_actor,status_after,note
+CLM202600001,EVT0001-01,1,Received,2026-04-29,System,Received,Portal
+CLM202600001,EVT0001-02,2,Eligibility+Edits,2026-05-01,System,Validated,exceptions
+CLM202600001,EVT0001-03,3,Pended,2026-05-02,System,Pended,Needs additional info
+CLM202600001,EVT0001-04,4,Info Received,2026-05-09,Provider,Rework,Added missing fields
+CLM202600001,EVT0001-05,5,Re-validated,2026-05-10,System,Validated,
+CLM202600001,EVT0001-06,6,Routed,2026-05-02,System,InReview,Queue:ClaimsOps
+CLM202600001,EVT0001-07,7,Manual Adjudicated,2026-05-01,Examiner,Paid,
+CLM202600001,EVT0001-08,8,Payment Issued,2026-05-04,Finance,Closed,
+CLM202600002,EVT0002-01,1,Received,2026-02-28,System,Received,EDI
+CLM202600002,EVT0002-02,2,Eligibility+Edits,2026-02-28,System,Validated,clean
+CLM202600002,EVT0002-03,3,Routed,2026-03-01,System,InReview,Queue:ClaimsOps
+CLM202600002,EVT0002-04,4,Manual Adjudicated,2026-03-03,Examiner,Denied,
+CLM202600002,EVT0002-05,5,Denial Notified,2026-03-04,System,Closed,PR-1
+CLM202600003,EVT0003-01,1,Received,2026-04-29,System,Received,EDI
+CLM202600003,EVT0003-02,2,Eligibility+Edits,2026-04-29,System,Validated,exceptions
+CLM202600003,EVT0003-03,3,Pended,2026-04-30,System,Pended,Needs additional info
+CLM202600003,EVT0003-04,4,Info Received,2026-05-02,Provider,Rework,Added missing fields
+CLM202600003,EVT0003-05,5,Re-validated,2026-05-03,System,Validated,
+CLM202600003,EVT0003-06,6,Routed,2026-04-30,System,InReview,Queue:ClaimsOps
+CLM202600003,EVT0003-07,7,Manual Adjudicated,2026-05-05,Examiner,Paid,
+CLM202600003,EVT0003-08,8,Payment Issued,2026-05-06,Finance,Closed,
+CLM202600004,EVT0004-01,1,Received,2026-01-22,System,Received,EDI
+CLM202600004,EVT0004-02,2,Eligibility+Edits,2026-01-22,System,Validated,exceptions
+CLM202600004,EVT0004-03,3,Pended,2026-01-23,System,Pended,Needs additional info
+CLM202600004,EVT0004-04,4,Info Received,2026-02-02,Provider,Rework,Added missing fields
+CLM202600004,EVT0004-05,5,Re-validated,2026-02-03,System,Validated,
+CLM202600004,EVT0004-06,6,Routed,2026-01-23,System,InReview,Queue:ClaimsOps
+CLM202600004,EVT0004-07,7,Manual Adjudicated,2026-02-02,Examiner,Paid,
+CLM202600004,EVT0004-08,8,Payment Issued,2026-02-04,Finance,Closed,
+CLM202600005,EVT0005-01,1,Received,2026-04-06,System,Received,EDI
+CLM202600005,EVT0005-02,2,Eligibility+Edits,2026-04-06,System,Validated,clean
+CLM202600005,EVT0005-03,3,Routed,2026-04-07,System,InReview,Queue:ClaimsOps
+CLM202600005,EVT0005-04,4,Manual Adjudicated,2026-04-13,Examiner,Paid,
+CLM202600005,EVT0005-05,5,Payment Issued,2026-04-16,Finance,Closed,
+CLM202600006,EVT0006-01,1,Received,2026-05-01,System,Received,EDI
+CLM202600006,EVT0006-02,2,Eligibility+Edits,2026-05-01,System,Validated,exceptions
+CLM202600006,EVT0006-03,3,Pended,2026-05-02,System,Pended,Needs additional info
+CLM202600006,EVT0006-04,4,Info Received,2026-05-12,Provider,Rework,Added missing fields
+CLM202600006,EVT0006-05,5,Re-validated,2026-05-13,System,Validated,
+CLM202600006,EVT0006-06,6,Routed,2026-05-02,System,InReview,Queue:ClaimsOps
+CLM202600006,EVT0006-07,7,Manual Adjudicated,2026-05-06,Examiner,PartiallyDenied,
+CLM202600006,EVT0006-08,8,Payment Issued,2026-05-11,Finance,Closed,
+CLM202600007,EVT0007-01,1,Received,2026-02-07,System,Received,EDI
+CLM202600007,EVT0007-02,2,Eligibility+Edits,2026-02-08,System,Validated,exceptions
+CLM202600007,EVT0007-03,3,Pended,2026-02-09,System,Pended,Needs additional info
+CLM202600007,EVT0007-04,4,Info Received,2026-02-11,Provider,Rework,Added missing fields
+CLM202600007,EVT0007-05,5,Re-validated,2026-02-12,System,Validated,
+CLM202600007,EVT0007-06,6,Auto Adjudicated,2026-02-10,RulesEngine,Paid,
+CLM202600007,EVT0007-07,7,Payment Issued,2026-02-11,Finance,Closed,
+CLM202600008,EVT0008-01,1,Received,2026-02-24,System,Received,EDI
+CLM202600008,EVT0008-02,2,Eligibility+Edits,2026-02-24,System,Validated,exceptions
+CLM202600008,EVT0008-03,3,Pended,2026-02-25,System,Pended,Needs additional info
+CLM202600008,EVT0008-04,4,Info Received,2026-02-27,Provider,Rework,Added missing fields
+CLM202600008,EVT0008-05,5,Re-validated,2026-02-28,System,Validated,
+CLM202600008,EVT0008-06,6,Routed,2026-02-25,System,InReview,Queue:ClaimsOps
+CLM202600008,EVT0008-07,7,Manual Adjudicated,2026-02-26,Examiner,Paid,
+CLM202600008,EVT0008-08,8,Payment Issued,2026-02-27,Finance,Closed,
+CLM202600009,EVT0009-01,1,Received,2026-03-16,System,Received,EDI
+CLM202600009,EVT0009-02,2,Eligibility+Edits,2026-03-16,System,Validated,exceptions
+CLM202600009,EVT0009-03,3,Pended,2026-03-17,System,Pended,Needs additional info
+CLM202600009,EVT0009-04,4,Info Received,2026-03-19,Provider,Rework,Added missing fields
+CLM202600009,EVT0009-05,5,Re-validated,2026-03-20,System,Validated,
+CLM202600009,EVT0009-06,6,Routed,2026-03-17,System,InReview,Queue:ClaimsOps
+CLM202600009,EVT0009-07,7,Manual Adjudicated,2026-03-20,Examiner,Paid,
+CLM202600009,EVT0009-08,8,Payment Issued,2026-03-25,Finance,Closed,
+CLM202600010,EVT0010-01,1,Received,2026-03-24,System,Received,EDI
+CLM202600010,EVT0010-02,2,Eligibility+Edits,2026-03-24,System,Validated,clean
+CLM202600010,EVT0010-03,3,Auto Adjudicated,2026-04-07,RulesEngine,Pended,
+CLM202600010,EVT0010-04,4,Still Pended,2026-04-07,System,Pended,Awaiting response
+CLM202600011,EVT0011-01,1,Received,2026-04-02,System,Received,EDI
+CLM202600011,EVT0011-02,2,Eligibility+Edits,2026-04-02,System,Validated,clean
+CLM202600011,EVT0011-03,3,Routed,2026-04-03,System,InReview,Queue:ClaimsOps
+CLM202600011,EVT0011-04,4,Manual Adjudicated,2026-04-07,Examiner,Paid,
+CLM202600011,EVT0011-05,5,Payment Issued,2026-04-09,Finance,Closed,
+CLM202600012,EVT0012-01,1,Received,2026-03-29,System,Received,Portal
+CLM202600012,EVT0012-02,2,Eligibility+Edits,2026-03-30,System,Validated,clean
+CLM202600012,EVT0012-03,3,Auto Adjudicated,2026-04-03,RulesEngine,Paid,
+CLM202600012,EVT0012-04,4,Payment Issued,2026-04-07,Finance,Closed,
+CLM202600013,EVT0013-01,1,Received,2026-03-03,System,Received,EDI
+CLM202600013,EVT0013-02,2,Eligibility+Edits,2026-03-04,System,Validated,clean
+CLM202600013,EVT0013-03,3,Auto Adjudicated,2026-03-10,RulesEngine,Paid,
+CLM202600013,EVT0013-04,4,Payment Issued,2026-03-13,Finance,Closed,
+CLM202600014,EVT0014-01,1,Received,2026-03-28,System,Received,EDI
+CLM202600014,EVT0014-02,2,Eligibility+Edits,2026-03-28,System,Validated,clean
+CLM202600014,EVT0014-03,3,Auto Adjudicated,2026-04-07,RulesEngine,Adjusted,
+CLM202600014,EVT0014-04,4,Payment Issued,2026-04-10,Finance,Closed,
+CLM202600015,EVT0015-01,1,Received,2026-02-27,System,Received,EDI
+CLM202600015,EVT0015-02,2,Eligibility+Edits,2026-02-27,System,Validated,clean
+CLM202600015,EVT0015-03,3,Routed,2026-02-28,System,InReview,Queue:ClaimsOps
+CLM202600015,EVT0015-04,4,Manual Adjudicated,2026-03-19,Examiner,Pended,
+CLM202600015,EVT0015-05,5,Still Pended,2026-03-19,System,Pended,Awaiting response
+CLM202600016,EVT0016-01,1,Received,2026-03-01,System,Received,EDI
+CLM202600016,EVT0016-02,2,Eligibility+Edits,2026-03-01,System,Validated,exceptions
+CLM202600016,EVT0016-03,3,Pended,2026-03-02,System,Pended,Needs additional info
+CLM202600016,EVT0016-04,4,Info Received,2026-03-12,Provider,Rework,Added missing fields
+CLM202600016,EVT0016-05,5,Re-validated,2026-03-13,System,Validated,
+CLM202600016,EVT0016-06,6,Routed,2026-03-02,System,InReview,Queue:ClaimsOps
+CLM202600016,EVT0016-07,7,Manual Adjudicated,2026-03-03,Examiner,Paid,
+CLM202600016,EVT0016-08,8,Payment Issued,2026-03-10,Finance,Closed,
+CLM202600017,EVT0017-01,1,Received,2026-03-18,System,Received,EDI
+CLM202600017,EVT0017-02,2,Eligibility+Edits,2026-03-18,System,Validated,exceptions
+CLM202600017,EVT0017-03,3,Pended,2026-03-19,System,Pended,Needs additional info
+CLM202600017,EVT0017-04,4,Info Received,2026-03-26,Provider,Rework,Added missing fields
+CLM202600017,EVT0017-05,5,Re-validated,2026-03-27,System,Validated,
+CLM202600017,EVT0017-06,6,Routed,2026-03-19,System,InReview,Queue:ClaimsOps
+CLM202600017,EVT0017-07,7,Manual Adjudicated,2026-03-24,Examiner,Paid,
+CLM202600017,EVT0017-08,8,Payment Issued,2026-03-25,Finance,Closed,
+CLM202600018,EVT0018-01,1,Received,2026-05-03,System,Received,EDI
+CLM202600018,EVT0018-02,2,Eligibility+Edits,2026-05-03,System,Validated,exceptions
+CLM202600018,EVT0018-03,3,Pended,2026-05-04,System,Pended,Needs additional info
+CLM202600018,EVT0018-04,4,Info Received,2026-05-08,Provider,Rework,Added missing fields
+CLM202600018,EVT0018-05,5,Re-validated,2026-05-09,System,Validated,
+CLM202600018,EVT0018-06,6,Routed,2026-05-04,System,InReview,Queue:ClaimsOps
+CLM202600018,EVT0018-07,7,Manual Adjudicated,2026-05-07,Examiner,Paid,
+CLM202600018,EVT0018-08,8,Payment Issued,2026-05-12,Finance,Closed,
+CLM202600019,EVT0019-01,1,Received,2026-02-13,System,Received,EDI
+CLM202600019,EVT0019-02,2,Eligibility+Edits,2026-02-14,System,Validated,clean
+CLM202600019,EVT0019-03,3,Auto Adjudicated,2026-02-18,RulesEngine,Paid,
+CLM202600019,EVT0019-04,4,Payment Issued,2026-02-20,Finance,Closed,
+CLM202600020,EVT0020-01,1,Received,2026-04-21,System,Received,EDI
+CLM202600020,EVT0020-02,2,Eligibility+Edits,2026-04-21,System,Validated,clean
+CLM202600020,EVT0020-03,3,Auto Adjudicated,2026-04-30,RulesEngine,Pended,
+CLM202600020,EVT0020-04,4,Still Pended,2026-04-30,System,Pended,Awaiting response
+CLM202600021,EVT0021-01,1,Received,2026-01-11,System,Received,EDI
+CLM202600021,EVT0021-02,2,Eligibility+Edits,2026-01-11,System,Validated,clean
+CLM202600021,EVT0021-03,3,Auto Adjudicated,2026-01-14,RulesEngine,Paid,
+CLM202600021,EVT0021-04,4,Payment Issued,2026-01-16,Finance,Closed,
+CLM202600022,EVT0022-01,1,Received,2026-04-25,System,Received,Portal
+CLM202600022,EVT0022-02,2,Eligibility+Edits,2026-04-25,System,Validated,clean
+CLM202600022,EVT0022-03,3,Auto Adjudicated,2026-04-29,RulesEngine,Paid,
+CLM202600022,EVT0022-04,4,Payment Issued,2026-05-06,Finance,Closed,
+CLM202600023,EVT0023-01,1,Received,2026-04-21,System,Received,EDI
+CLM202600023,EVT0023-02,2,Eligibility+Edits,2026-04-22,System,Validated,exceptions
+CLM202600023,EVT0023-03,3,Pended,2026-04-23,System,Pended,Needs additional info
+CLM202600023,EVT0023-04,4,Info Received,2026-04-30,Provider,Rework,Added missing fields
+CLM202600023,EVT0023-05,5,Re-validated,2026-05-01,System,Validated,
+CLM202600023,EVT0023-06,6,Routed,2026-04-23,System,InReview,Queue:ClaimsOps
+CLM202600023,EVT0023-07,7,Manual Adjudicated,2026-04-27,Examiner,PartiallyDenied,
+CLM202600023,EVT0023-08,8,Payment Issued,2026-04-28,Finance,Closed,
+CLM202600024,EVT0024-01,1,Received,2026-02-25,System,Received,EDI
+CLM202600024,EVT0024-02,2,Eligibility+Edits,2026-02-25,System,Validated,clean
+CLM202600024,EVT0024-03,3,Auto Adjudicated,2026-03-02,RulesEngine,PartiallyDenied,
+CLM202600024,EVT0024-04,4,Payment Issued,2026-03-04,Finance,Closed,
+CLM202600025,EVT0025-01,1,Received,2026-01-28,System,Received,EDI
+CLM202600025,EVT0025-02,2,Eligibility+Edits,2026-01-29,System,Validated,clean
+CLM202600025,EVT0025-03,3,Routed,2026-01-30,System,InReview,Queue:ClaimsOps
+CLM202600025,EVT0025-04,4,Manual Adjudicated,2026-01-30,Examiner,Paid,
+CLM202600025,EVT0025-05,5,Payment Issued,2026-02-03,Finance,Closed,
+CLM202600026,EVT0026-01,1,Received,2026-04-26,System,Received,Portal
+CLM202600026,EVT0026-02,2,Eligibility+Edits,2026-04-26,System,Validated,clean
+CLM202600026,EVT0026-03,3,Auto Adjudicated,2026-05-08,RulesEngine,Pended,
+CLM202600026,EVT0026-04,4,Still Pended,2026-05-08,System,Pended,Awaiting response
+CLM202600027,EVT0027-01,1,Received,2026-02-20,System,Received,EDI
+CLM202600027,EVT0027-02,2,Eligibility+Edits,2026-02-20,System,Validated,clean
+CLM202600027,EVT0027-03,3,Routed,2026-02-21,System,InReview,Queue:ClaimsOps
+CLM202600027,EVT0027-04,4,Manual Adjudicated,2026-02-26,Examiner,Paid,
+CLM202600027,EVT0027-05,5,Payment Issued,2026-02-27,Finance,Closed,
+CLM202600028,EVT0028-01,1,Received,2026-02-28,System,Received,EDI
+CLM202600028,EVT0028-02,2,Eligibility+Edits,2026-02-28,System,Validated,clean
+CLM202600028,EVT0028-03,3,Auto Adjudicated,2026-03-11,RulesEngine,Denied,
+CLM202600028,EVT0028-04,4,Denial Notified,2026-03-12,System,Closed,CO-97
+CLM202600029,EVT0029-01,1,Received,2026-01-15,System,Received,EDI
+CLM202600029,EVT0029-02,2,Eligibility+Edits,2026-01-17,System,Validated,clean
+CLM202600029,EVT0029-03,3,Routed,2026-01-18,System,InReview,Queue:ClaimsOps
+CLM202600029,EVT0029-04,4,Manual Adjudicated,2026-01-22,Examiner,Paid,
+CLM202600029,EVT0029-05,5,Payment Issued,2026-01-23,Finance,Closed,
+CLM202600030,EVT0030-01,1,Received,2026-04-03,System,Received,EDI
+CLM202600030,EVT0030-02,2,Eligibility+Edits,2026-04-03,System,Validated,clean
+CLM202600030,EVT0030-03,3,Auto Adjudicated,2026-04-14,RulesEngine,Paid,
+CLM202600030,EVT0030-04,4,Payment Issued,2026-04-16,Finance,Closed,
+CLM202600031,EVT0031-01,1,Received,2026-03-08,System,Received,EDI
+CLM202600031,EVT0031-02,2,Eligibility+Edits,2026-03-09,System,Validated,clean
+CLM202600031,EVT0031-03,3,Routed,2026-03-10,System,InReview,Queue:ClaimsOps
+CLM202600031,EVT0031-04,4,Manual Adjudicated,2026-03-13,Examiner,Paid,
+CLM202600031,EVT0031-05,5,Payment Issued,2026-03-17,Finance,Closed,
+CLM202600032,EVT0032-01,1,Received,2026-02-04,System,Received,EDI
+CLM202600032,EVT0032-02,2,Eligibility+Edits,2026-02-04,System,Validated,clean
+CLM202600032,EVT0032-03,3,Routed,2026-02-05,System,InReview,Queue:ClaimsOps
+CLM202600032,EVT0032-04,4,Manual Adjudicated,2026-02-10,Examiner,Paid,
+CLM202600032,EVT0032-05,5,Payment Issued,2026-02-12,Finance,Closed,
+CLM202600033,EVT0033-01,1,Received,2026-04-18,System,Received,EDI
+CLM202600033,EVT0033-02,2,Eligibility+Edits,2026-04-18,System,Validated,clean
+CLM202600033,EVT0033-03,3,Auto Adjudicated,2026-04-22,RulesEngine,Paid,
+CLM202600033,EVT0033-04,4,Payment Issued,2026-04-24,Finance,Closed,
+CLM202600034,EVT0034-01,1,Received,2026-02-23,System,Received,EDI
+CLM202600034,EVT0034-02,2,Eligibility+Edits,2026-02-23,System,Validated,clean
+CLM202600034,EVT0034-03,3,Routed,2026-02-24,System,InReview,Queue:ClaimsOps
+CLM202600034,EVT0034-04,4,Manual Adjudicated,2026-03-13,Examiner,PartiallyDenied,
+CLM202600034,EVT0034-05,5,Payment Issued,2026-03-16,Finance,Closed,
+CLM202600035,EVT0035-01,1,Received,2026-01-27,System,Received,EDI
+CLM202600035,EVT0035-02,2,Eligibility+Edits,2026-01-28,System,Validated,clean
+CLM202600035,EVT0035-03,3,Auto Adjudicated,2026-02-03,RulesEngine,Paid,
+CLM202600035,EVT0035-04,4,Payment Issued,2026-02-10,Finance,Closed,
+CLM202600036,EVT0036-01,1,Received,2026-04-22,System,Received,Portal
+CLM202600036,EVT0036-02,2,Eligibility+Edits,2026-04-23,System,Validated,clean
+CLM202600036,EVT0036-03,3,Auto Adjudicated,2026-04-28,RulesEngine,Paid,
+CLM202600036,EVT0036-04,4,Payment Issued,2026-05-01,Finance,Closed,
+CLM202600037,EVT0037-01,1,Received,2026-02-21,System,Received,EDI
+CLM202600037,EVT0037-02,2,Eligibility+Edits,2026-02-23,System,Validated,clean
+CLM202600037,EVT0037-03,3,Routed,2026-02-24,System,InReview,Queue:ClaimsOps
+CLM202600037,EVT0037-04,4,Manual Adjudicated,2026-02-26,Examiner,PartiallyDenied,
+CLM202600037,EVT0037-05,5,Payment Issued,2026-02-27,Finance,Closed,
+CLM202600038,EVT0038-01,1,Received,2026-02-22,System,Received,EDI
+CLM202600038,EVT0038-02,2,Eligibility+Edits,2026-02-22,System,Validated,exceptions
+CLM202600038,EVT0038-03,3,Pended,2026-02-23,System,Pended,Needs additional info
+CLM202600038,EVT0038-04,4,Info Received,2026-02-25,Provider,Rework,Added missing fields
+CLM202600038,EVT0038-05,5,Re-validated,2026-02-26,System,Validated,
+CLM202600038,EVT0038-06,6,Routed,2026-02-23,System,InReview,Queue:ClaimsOps
+CLM202600038,EVT0038-07,7,Manual Adjudicated,2026-03-06,Examiner,Adjusted,
+CLM202600038,EVT0038-08,8,Payment Issued,2026-03-11,Finance,Closed,
+CLM202600039,EVT0039-01,1,Received,2026-05-03,System,Received,EDI
+CLM202600039,EVT0039-02,2,Eligibility+Edits,2026-05-03,System,Validated,clean
+CLM202600039,EVT0039-03,3,Auto Adjudicated,2026-05-12,RulesEngine,Paid,
+CLM202600039,EVT0039-04,4,Payment Issued,2026-05-14,Finance,Closed,
+CLM202600040,EVT0040-01,1,Received,2026-04-19,System,Received,EDI
+CLM202600040,EVT0040-02,2,Eligibility+Edits,2026-04-19,System,Validated,clean
+CLM202600040,EVT0040-03,3,Routed,2026-04-20,System,InReview,Queue:ClaimsOps
+CLM202600040,EVT0040-04,4,Manual Adjudicated,2026-04-21,Examiner,Paid,
+CLM202600040,EVT0040-05,5,Payment Issued,2026-04-24,Finance,Closed,
+CLM202600041,EVT0041-01,1,Received,2026-03-20,System,Received,EDI
+CLM202600041,EVT0041-02,2,Eligibility+Edits,2026-03-21,System,Validated,clean
+CLM202600041,EVT0041-03,3,Routed,2026-03-22,System,InReview,Queue:ClaimsOps
+CLM202600041,EVT0041-04,4,Manual Adjudicated,2026-03-24,Examiner,Paid,
+CLM202600041,EVT0041-05,5,Payment Issued,2026-03-25,Finance,Closed,
+CLM202600042,EVT0042-01,1,Received,2026-02-22,System,Received,EDI
+CLM202600042,EVT0042-02,2,Eligibility+Edits,2026-02-23,System,Validated,clean
+CLM202600042,EVT0042-03,3,Routed,2026-02-24,System,InReview,Queue:ClaimsOps
+CLM202600042,EVT0042-04,4,Manual Adjudicated,2026-02-24,Examiner,Paid,
+CLM202600042,EVT0042-05,5,Payment Issued,2026-02-26,Finance,Closed,
+CLM202600043,EVT0043-01,1,Received,2026-04-04,System,Received,EDI
+CLM202600043,EVT0043-02,2,Eligibility+Edits,2026-04-04,System,Validated,clean
+CLM202600043,EVT0043-03,3,Routed,2026-04-05,System,InReview,Queue:ClaimsOps
+CLM202600043,EVT0043-04,4,Manual Adjudicated,2026-04-08,Examiner,Paid,
+CLM202600043,EVT0043-05,5,Payment Issued,2026-04-09,Finance,Closed,
+CLM202600044,EVT0044-01,1,Received,2026-01-28,System,Received,EDI
+CLM202600044,EVT0044-02,2,Eligibility+Edits,2026-01-28,System,Validated,clean
+CLM202600044,EVT0044-03,3,Routed,2026-01-29,System,InReview,Queue:ClaimsOps
+CLM202600044,EVT0044-04,4,Manual Adjudicated,2026-02-11,Examiner,Paid,
+CLM202600044,EVT0044-05,5,Payment Issued,2026-02-16,Finance,Closed,
+CLM202600045,EVT0045-01,1,Received,2026-02-21,System,Received,EDI
+CLM202600045,EVT0045-02,2,Eligibility+Edits,2026-02-22,System,Validated,exceptions
+CLM202600045,EVT0045-03,3,Pended,2026-02-23,System,Pended,Needs additional info
+CLM202600045,EVT0045-04,4,Info Received,2026-02-27,Provider,Rework,Added missing fields
+CLM202600045,EVT0045-05,5,Re-validated,2026-02-28,System,Validated,
+CLM202600045,EVT0045-06,6,Routed,2026-02-23,System,InReview,Queue:ClaimsOps
+CLM202600045,EVT0045-07,7,Manual Adjudicated,2026-03-03,Examiner,Pended,
+CLM202600045,EVT0045-08,8,Still Pended,2026-03-03,System,Pended,Awaiting response
+CLM202600046,EVT0046-01,1,Received,2026-05-23,System,Received,EDI
+CLM202600046,EVT0046-02,2,Eligibility+Edits,2026-05-24,System,Validated,clean
+CLM202600046,EVT0046-03,3,Auto Adjudicated,2026-05-29,RulesEngine,Paid,
+CLM202600046,EVT0046-04,4,Payment Issued,2026-06-01,Finance,Closed,
+CLM202600047,EVT0047-01,1,Received,2026-04-19,System,Received,EDI
+CLM202600047,EVT0047-02,2,Eligibility+Edits,2026-04-20,System,Validated,clean
+CLM202600047,EVT0047-03,3,Routed,2026-04-21,System,InReview,Queue:ClaimsOps
+CLM202600047,EVT0047-04,4,Manual Adjudicated,2026-05-01,Examiner,Paid,
+CLM202600047,EVT0047-05,5,Payment Issued,2026-05-04,Finance,Closed,
+CLM202600048,EVT0048-01,1,Received,2026-04-14,System,Received,EDI
+CLM202600048,EVT0048-02,2,Eligibility+Edits,2026-04-14,System,Validated,clean
+CLM202600048,EVT0048-03,3,Routed,2026-04-15,System,InReview,Queue:ClaimsOps
+CLM202600048,EVT0048-04,4,Manual Adjudicated,2026-04-21,Examiner,Paid,
+CLM202600048,EVT0048-05,5,Payment Issued,2026-04-23,Finance,Closed,
+CLM202600049,EVT0049-01,1,Received,2026-02-21,System,Received,EDI
+CLM202600049,EVT0049-02,2,Eligibility+Edits,2026-02-21,System,Validated,exceptions
+CLM202600049,EVT0049-03,3,Pended,2026-02-22,System,Pended,Needs additional info
+CLM202600049,EVT0049-04,4,Info Received,2026-03-04,Provider,Rework,Added missing fields
+CLM202600049,EVT0049-05,5,Re-validated,2026-03-05,System,Validated,
+CLM202600049,EVT0049-06,6,Routed,2026-02-22,System,InReview,Queue:ClaimsOps
+CLM202600049,EVT0049-07,7,Manual Adjudicated,2026-03-06,Examiner,Pended,
+CLM202600049,EVT0049-08,8,Still Pended,2026-03-06,System,Pended,Awaiting response
+CLM202600050,EVT0050-01,1,Received,2026-01-18,System,Received,EDI
+CLM202600050,EVT0050-02,2,Eligibility+Edits,2026-01-19,System,Validated,clean
+CLM202600050,EVT0050-03,3,Routed,2026-01-20,System,InReview,Queue:ClaimsOps
+CLM202600050,EVT0050-04,4,Manual Adjudicated,2026-01-23,Examiner,Paid,
+CLM202600050,EVT0050-05,5,Payment Issued,2026-01-27,Finance,Closed,
+CLM202600051,EVT0051-01,1,Received,2026-04-13,System,Received,Paper
+CLM202600051,EVT0051-02,2,Eligibility+Edits,2026-04-15,System,Validated,exceptions
+CLM202600051,EVT0051-03,3,Pended,2026-04-16,System,Pended,Needs additional info
+CLM202600051,EVT0051-04,4,Info Received,2026-04-20,Provider,Rework,Added missing fields
+CLM202600051,EVT0051-05,5,Re-validated,2026-04-21,System,Validated,
+CLM202600051,EVT0051-06,6,Auto Adjudicated,2026-04-16,RulesEngine,Denied,
+CLM202600051,EVT0051-07,7,Denial Notified,2026-04-17,System,Closed,CO-50
+CLM202600052,EVT0052-01,1,Received,2026-03-27,System,Received,EDI
+CLM202600052,EVT0052-02,2,Eligibility+Edits,2026-03-27,System,Validated,clean
+CLM202600052,EVT0052-03,3,Routed,2026-03-28,System,InReview,Queue:ClaimsOps
+CLM202600052,EVT0052-04,4,Manual Adjudicated,2026-04-01,Examiner,PartiallyDenied,
+CLM202600052,EVT0052-05,5,Payment Issued,2026-04-02,Finance,Closed,
+CLM202600053,EVT0053-01,1,Received,2026-04-26,System,Received,Paper
+CLM202600053,EVT0053-02,2,Eligibility+Edits,2026-04-28,System,Validated,clean
+CLM202600053,EVT0053-03,3,Routed,2026-04-29,System,InReview,Queue:ClaimsOps
+CLM202600053,EVT0053-04,4,Manual Adjudicated,2026-05-08,Examiner,Paid,
+CLM202600053,EVT0053-05,5,Payment Issued,2026-05-15,Finance,Closed,
+CLM202600054,EVT0054-01,1,Received,2026-03-23,System,Received,EDI
+CLM202600054,EVT0054-02,2,Eligibility+Edits,2026-03-23,System,Validated,clean
+CLM202600054,EVT0054-03,3,Auto Adjudicated,2026-03-26,RulesEngine,PartiallyDenied,
+CLM202600054,EVT0054-04,4,Payment Issued,2026-03-27,Finance,Closed,
+CLM202600055,EVT0055-01,1,Received,2026-02-27,System,Received,EDI
+CLM202600055,EVT0055-02,2,Eligibility+Edits,2026-02-27,System,Validated,clean
+CLM202600055,EVT0055-03,3,Auto Adjudicated,2026-03-04,RulesEngine,Paid,
+CLM202600055,EVT0055-04,4,Payment Issued,2026-03-09,Finance,Closed,
+CLM202600056,EVT0056-01,1,Received,2026-01-28,System,Received,Portal
+CLM202600056,EVT0056-02,2,Eligibility+Edits,2026-01-28,System,Validated,clean
+CLM202600056,EVT0056-03,3,Routed,2026-01-29,System,InReview,Queue:ClaimsOps
+CLM202600056,EVT0056-04,4,Manual Adjudicated,2026-02-02,Examiner,PartiallyDenied,
+CLM202600056,EVT0056-05,5,Payment Issued,2026-02-05,Finance,Closed,
+CLM202600057,EVT0057-01,1,Received,2026-02-10,System,Received,EDI
+CLM202600057,EVT0057-02,2,Eligibility+Edits,2026-02-12,System,Validated,exceptions
+CLM202600057,EVT0057-03,3,Pended,2026-02-13,System,Pended,Needs additional info
+CLM202600057,EVT0057-04,4,Info Received,2026-02-17,Provider,Rework,Added missing fields
+CLM202600057,EVT0057-05,5,Re-validated,2026-02-18,System,Validated,
+CLM202600057,EVT0057-06,6,Routed,2026-02-13,System,InReview,Queue:ClaimsOps
+CLM202600057,EVT0057-07,7,Manual Adjudicated,2026-02-16,Examiner,Paid,
+CLM202600057,EVT0057-08,8,Payment Issued,2026-02-18,Finance,Closed,
+CLM202600058,EVT0058-01,1,Received,2026-03-19,System,Received,EDI
+CLM202600058,EVT0058-02,2,Eligibility+Edits,2026-03-20,System,Validated,clean
+CLM202600058,EVT0058-03,3,Auto Adjudicated,2026-03-23,RulesEngine,Paid,
+CLM202600058,EVT0058-04,4,Payment Issued,2026-03-26,Finance,Closed,
+CLM202600059,EVT0059-01,1,Received,2026-04-25,System,Received,EDI
+CLM202600059,EVT0059-02,2,Eligibility+Edits,2026-04-25,System,Validated,clean
+CLM202600059,EVT0059-03,3,Routed,2026-04-26,System,InReview,Queue:ClaimsOps
+CLM202600059,EVT0059-04,4,Manual Adjudicated,2026-05-22,Examiner,Adjusted,
+CLM202600059,EVT0059-05,5,Payment Issued,2026-05-27,Finance,Closed,
+CLM202600060,EVT0060-01,1,Received,2026-01-29,System,Received,Paper
+CLM202600060,EVT0060-02,2,Eligibility+Edits,2026-01-30,System,Validated,clean
+CLM202600060,EVT0060-03,3,Auto Adjudicated,2026-02-04,RulesEngine,Paid,
+CLM202600060,EVT0060-04,4,Payment Issued,2026-02-06,Finance,Closed,
+CLM202600061,EVT0061-01,1,Received,2026-02-17,System,Received,EDI
+CLM202600061,EVT0061-02,2,Eligibility+Edits,2026-02-18,System,Validated,exceptions
+CLM202600061,EVT0061-03,3,Pended,2026-02-19,System,Pended,Needs additional info
+CLM202600061,EVT0061-04,4,Info Received,2026-02-26,Provider,Rework,Added missing fields
+CLM202600061,EVT0061-05,5,Re-validated,2026-02-27,System,Validated,
+CLM202600061,EVT0061-06,6,Routed,2026-02-19,System,InReview,Queue:ClaimsOps
+CLM202600061,EVT0061-07,7,Manual Adjudicated,2026-02-19,Examiner,Paid,
+CLM202600061,EVT0061-08,8,Payment Issued,2026-02-23,Finance,Closed,
+CLM202600062,EVT0062-01,1,Received,2026-04-03,System,Received,EDI
+CLM202600062,EVT0062-02,2,Eligibility+Edits,2026-04-03,System,Validated,exceptions
+CLM202600062,EVT0062-03,3,Pended,2026-04-04,System,Pended,Needs additional info
+CLM202600062,EVT0062-04,4,Info Received,2026-04-08,Provider,Rework,Added missing fields
+CLM202600062,EVT0062-05,5,Re-validated,2026-04-09,System,Validated,
+CLM202600062,EVT0062-06,6,Routed,2026-04-04,System,InReview,Queue:ClaimsOps
+CLM202600062,EVT0062-07,7,Manual Adjudicated,2026-04-07,Examiner,Paid,
+CLM202600062,EVT0062-08,8,Payment Issued,2026-04-09,Finance,Closed,
+CLM202600063,EVT0063-01,1,Received,2026-01-31,System,Received,EDI
+CLM202600063,EVT0063-02,2,Eligibility+Edits,2026-02-01,System,Validated,clean
+CLM202600063,EVT0063-03,3,Auto Adjudicated,2026-02-06,RulesEngine,Paid,
+CLM202600063,EVT0063-04,4,Payment Issued,2026-02-09,Finance,Closed,
+CLM202600064,EVT0064-01,1,Received,2026-05-22,System,Received,EDI
+CLM202600064,EVT0064-02,2,Eligibility+Edits,2026-05-22,System,Validated,clean
+CLM202600064,EVT0064-03,3,Auto Adjudicated,2026-05-27,RulesEngine,Paid,
+CLM202600064,EVT0064-04,4,Payment Issued,2026-05-29,Finance,Closed,
+CLM202600065,EVT0065-01,1,Received,2026-03-15,System,Received,Portal
+CLM202600065,EVT0065-02,2,Eligibility+Edits,2026-03-17,System,Validated,clean
+CLM202600065,EVT0065-03,3,Routed,2026-03-18,System,InReview,Queue:ClaimsOps
+CLM202600065,EVT0065-04,4,Manual Adjudicated,2026-03-19,Examiner,Paid,
+CLM202600065,EVT0065-05,5,Payment Issued,2026-03-20,Finance,Closed,
+CLM202600066,EVT0066-01,1,Received,2026-03-08,System,Received,EDI
+CLM202600066,EVT0066-02,2,Eligibility+Edits,2026-03-10,System,Validated,clean
+CLM202600066,EVT0066-03,3,Routed,2026-03-11,System,InReview,Queue:ClaimsOps
+CLM202600066,EVT0066-04,4,Manual Adjudicated,2026-04-06,Examiner,Pended,
+CLM202600066,EVT0066-05,5,Still Pended,2026-04-06,System,Pended,Awaiting response
+CLM202600067,EVT0067-01,1,Received,2026-03-04,System,Received,Portal
+CLM202600067,EVT0067-02,2,Eligibility+Edits,2026-03-06,System,Validated,exceptions
+CLM202600067,EVT0067-03,3,Pended,2026-03-07,System,Pended,Needs additional info
+CLM202600067,EVT0067-04,4,Info Received,2026-03-11,Provider,Rework,Added missing fields
+CLM202600067,EVT0067-05,5,Re-validated,2026-03-12,System,Validated,
+CLM202600067,EVT0067-06,6,Auto Adjudicated,2026-03-10,RulesEngine,Paid,
+CLM202600067,EVT0067-07,7,Payment Issued,2026-03-17,Finance,Closed,
+CLM202600068,EVT0068-01,1,Received,2026-04-07,System,Received,EDI
+CLM202600068,EVT0068-02,2,Eligibility+Edits,2026-04-08,System,Validated,clean
+CLM202600068,EVT0068-03,3,Routed,2026-04-09,System,InReview,Queue:ClaimsOps
+CLM202600068,EVT0068-04,4,Manual Adjudicated,2026-04-09,Examiner,Paid,
+CLM202600068,EVT0068-05,5,Payment Issued,2026-04-13,Finance,Closed,
+CLM202600069,EVT0069-01,1,Received,2026-05-12,System,Received,EDI
+CLM202600069,EVT0069-02,2,Eligibility+Edits,2026-05-13,System,Validated,clean
+CLM202600069,EVT0069-03,3,Routed,2026-05-14,System,InReview,Queue:ClaimsOps
+CLM202600069,EVT0069-04,4,Manual Adjudicated,2026-05-18,Examiner,PartiallyDenied,
+CLM202600069,EVT0069-05,5,Payment Issued,2026-05-20,Finance,Closed,
+CLM202600070,EVT0070-01,1,Received,2026-04-28,System,Received,Paper
+CLM202600070,EVT0070-02,2,Eligibility+Edits,2026-04-30,System,Validated,clean
+CLM202600070,EVT0070-03,3,Routed,2026-05-01,System,InReview,Queue:ClaimsOps
+CLM202600070,EVT0070-04,4,Manual Adjudicated,2026-04-30,Examiner,Paid,
+CLM202600070,EVT0070-05,5,Payment Issued,2026-05-04,Finance,Closed,
+CLM202600071,EVT0071-01,1,Received,2026-04-06,System,Received,Paper
+CLM202600071,EVT0071-02,2,Eligibility+Edits,2026-04-08,System,Validated,clean
+CLM202600071,EVT0071-03,3,Auto Adjudicated,2026-04-20,RulesEngine,Paid,
+CLM202600071,EVT0071-04,4,Payment Issued,2026-04-23,Finance,Closed,
+CLM202600072,EVT0072-01,1,Received,2026-04-28,System,Received,EDI
+CLM202600072,EVT0072-02,2,Eligibility+Edits,2026-04-29,System,Validated,clean
+CLM202600072,EVT0072-03,3,Auto Adjudicated,2026-05-08,RulesEngine,Denied,
+CLM202600072,EVT0072-04,4,Denial Notified,2026-05-09,System,Closed,CO-97
+CLM202600073,EVT0073-01,1,Received,2026-03-15,System,Received,EDI
+CLM202600073,EVT0073-02,2,Eligibility+Edits,2026-03-16,System,Validated,clean
+CLM202600073,EVT0073-03,3,Routed,2026-03-17,System,InReview,Queue:ClaimsOps
+CLM202600073,EVT0073-04,4,Manual Adjudicated,2026-03-19,Examiner,Paid,
+CLM202600073,EVT0073-05,5,Payment Issued,2026-03-20,Finance,Closed,
+CLM202600074,EVT0074-01,1,Received,2026-01-16,System,Received,Portal
+CLM202600074,EVT0074-02,2,Eligibility+Edits,2026-01-16,System,Validated,clean
+CLM202600074,EVT0074-03,3,Auto Adjudicated,2026-01-23,RulesEngine,Adjusted,
+CLM202600074,EVT0074-04,4,Payment Issued,2026-01-28,Finance,Closed,
+CLM202600075,EVT0075-01,1,Received,2026-02-12,System,Received,EDI
+CLM202600075,EVT0075-02,2,Eligibility+Edits,2026-02-12,System,Validated,clean
+CLM202600075,EVT0075-03,3,Auto Adjudicated,2026-02-26,RulesEngine,Paid,
+CLM202600075,EVT0075-04,4,Payment Issued,2026-02-27,Finance,Closed,
+CLM202600076,EVT0076-01,1,Received,2026-03-11,System,Received,EDI
+CLM202600076,EVT0076-02,2,Eligibility+Edits,2026-03-13,System,Validated,clean
+CLM202600076,EVT0076-03,3,Auto Adjudicated,2026-03-25,RulesEngine,Paid,
+CLM202600076,EVT0076-04,4,Payment Issued,2026-03-26,Finance,Closed,
+CLM202600077,EVT0077-01,1,Received,2026-04-07,System,Received,Portal
+CLM202600077,EVT0077-02,2,Eligibility+Edits,2026-04-07,System,Validated,exceptions
+CLM202600077,EVT0077-03,3,Pended,2026-04-08,System,Pended,Needs additional info
+CLM202600077,EVT0077-04,4,Info Received,2026-04-15,Provider,Rework,Added missing fields
+CLM202600077,EVT0077-05,5,Re-validated,2026-04-16,System,Validated,
+CLM202600077,EVT0077-06,6,Routed,2026-04-08,System,InReview,Queue:ClaimsOps
+CLM202600077,EVT0077-07,7,Manual Adjudicated,2026-04-10,Examiner,Denied,
+CLM202600077,EVT0077-08,8,Denial Notified,2026-04-11,System,Closed,CO-18
+CLM202600078,EVT0078-01,1,Received,2026-04-29,System,Received,Portal
+CLM202600078,EVT0078-02,2,Eligibility+Edits,2026-05-01,System,Validated,clean
+CLM202600078,EVT0078-03,3,Routed,2026-05-02,System,InReview,Queue:ClaimsOps
+CLM202600078,EVT0078-04,4,Manual Adjudicated,2026-05-04,Examiner,Paid,
+CLM202600078,EVT0078-05,5,Payment Issued,2026-05-06,Finance,Closed,
+CLM202600079,EVT0079-01,1,Received,2026-02-01,System,Received,EDI
+CLM202600079,EVT0079-02,2,Eligibility+Edits,2026-02-01,System,Validated,clean
+CLM202600079,EVT0079-03,3,Auto Adjudicated,2026-02-04,RulesEngine,PartiallyDenied,
+CLM202600079,EVT0079-04,4,Payment Issued,2026-02-09,Finance,Closed,
+CLM202600080,EVT0080-01,1,Received,2026-01-17,System,Received,EDI
+CLM202600080,EVT0080-02,2,Eligibility+Edits,2026-01-18,System,Validated,exceptions
+CLM202600080,EVT0080-03,3,Pended,2026-01-19,System,Pended,Needs additional info
+CLM202600080,EVT0080-04,4,Info Received,2026-01-29,Provider,Rework,Added missing fields
+CLM202600080,EVT0080-05,5,Re-validated,2026-01-30,System,Validated,
+CLM202600080,EVT0080-06,6,Routed,2026-01-19,System,InReview,Queue:ClaimsOps
+CLM202600080,EVT0080-07,7,Manual Adjudicated,2026-01-27,Examiner,Paid,
+CLM202600080,EVT0080-08,8,Payment Issued,2026-01-28,Finance,Closed,
+CLM202600081,EVT0081-01,1,Received,2026-01-22,System,Received,EDI
+CLM202600081,EVT0081-02,2,Eligibility+Edits,2026-01-22,System,Validated,clean
+CLM202600081,EVT0081-03,3,Auto Adjudicated,2026-01-29,RulesEngine,Paid,
+CLM202600081,EVT0081-04,4,Payment Issued,2026-02-03,Finance,Closed,
+CLM202600082,EVT0082-01,1,Received,2026-03-18,System,Received,EDI
+CLM202600082,EVT0082-02,2,Eligibility+Edits,2026-03-18,System,Validated,clean
+CLM202600082,EVT0082-03,3,Auto Adjudicated,2026-03-24,RulesEngine,Paid,
+CLM202600082,EVT0082-04,4,Payment Issued,2026-03-26,Finance,Closed,
+CLM202600083,EVT0083-01,1,Received,2026-01-29,System,Received,EDI
+CLM202600083,EVT0083-02,2,Eligibility+Edits,2026-01-29,System,Validated,clean
+CLM202600083,EVT0083-03,3,Routed,2026-01-30,System,InReview,Queue:ClaimsOps
+CLM202600083,EVT0083-04,4,Manual Adjudicated,2026-02-03,Examiner,Paid,
+CLM202600083,EVT0083-05,5,Payment Issued,2026-02-05,Finance,Closed,
+CLM202600084,EVT0084-01,1,Received,2026-03-13,System,Received,EDI
+CLM202600084,EVT0084-02,2,Eligibility+Edits,2026-03-14,System,Validated,clean
+CLM202600084,EVT0084-03,3,Routed,2026-03-15,System,InReview,Queue:ClaimsOps
+CLM202600084,EVT0084-04,4,Manual Adjudicated,2026-03-18,Examiner,Paid,
+CLM202600084,EVT0084-05,5,Payment Issued,2026-03-25,Finance,Closed,
+CLM202600085,EVT0085-01,1,Received,2026-04-11,System,Received,EDI
+CLM202600085,EVT0085-02,2,Eligibility+Edits,2026-04-11,System,Validated,clean
+CLM202600085,EVT0085-03,3,Auto Adjudicated,2026-04-24,RulesEngine,PartiallyDenied,
+CLM202600085,EVT0085-04,4,Payment Issued,2026-05-01,Finance,Closed,
+CLM202600086,EVT0086-01,1,Received,2026-02-21,System,Received,Paper
+CLM202600086,EVT0086-02,2,Eligibility+Edits,2026-02-22,System,Validated,clean
+CLM202600086,EVT0086-03,3,Routed,2026-02-23,System,InReview,Queue:ClaimsOps
+CLM202600086,EVT0086-04,4,Manual Adjudicated,2026-02-24,Examiner,Paid,
+CLM202600086,EVT0086-05,5,Payment Issued,2026-02-26,Finance,Closed,
+CLM202600087,EVT0087-01,1,Received,2026-04-12,System,Received,EDI
+CLM202600087,EVT0087-02,2,Eligibility+Edits,2026-04-12,System,Validated,clean
+CLM202600087,EVT0087-03,3,Routed,2026-04-13,System,InReview,Queue:ClaimsOps
+CLM202600087,EVT0087-04,4,Manual Adjudicated,2026-04-16,Examiner,Paid,
+CLM202600087,EVT0087-05,5,Payment Issued,2026-04-21,Finance,Closed,
+CLM202600088,EVT0088-01,1,Received,2026-03-09,System,Received,EDI
+CLM202600088,EVT0088-02,2,Eligibility+Edits,2026-03-09,System,Validated,clean
+CLM202600088,EVT0088-03,3,Routed,2026-03-10,System,InReview,Queue:ClaimsOps
+CLM202600088,EVT0088-04,4,Manual Adjudicated,2026-03-16,Examiner,Paid,
+CLM202600088,EVT0088-05,5,Payment Issued,2026-03-18,Finance,Closed,
+CLM202600089,EVT0089-01,1,Received,2026-04-25,System,Received,EDI
+CLM202600089,EVT0089-02,2,Eligibility+Edits,2026-04-26,System,Validated,exceptions
+CLM202600089,EVT0089-03,3,Pended,2026-04-27,System,Pended,Needs additional info
+CLM202600089,EVT0089-04,4,Info Received,2026-05-01,Provider,Rework,Added missing fields
+CLM202600089,EVT0089-05,5,Re-validated,2026-05-02,System,Validated,
+CLM202600089,EVT0089-06,6,Routed,2026-04-27,System,InReview,Queue:ClaimsOps
+CLM202600089,EVT0089-07,7,Manual Adjudicated,2026-05-01,Examiner,Paid,
+CLM202600089,EVT0089-08,8,Payment Issued,2026-05-05,Finance,Closed,
+CLM202600090,EVT0090-01,1,Received,2026-05-01,System,Received,EDI
+CLM202600090,EVT0090-02,2,Eligibility+Edits,2026-05-01,System,Validated,exceptions
+CLM202600090,EVT0090-03,3,Pended,2026-05-02,System,Pended,Needs additional info
+CLM202600090,EVT0090-04,4,Info Received,2026-05-04,Provider,Rework,Added missing fields
+CLM202600090,EVT0090-05,5,Re-validated,2026-05-05,System,Validated,
+CLM202600090,EVT0090-06,6,Routed,2026-05-02,System,InReview,Queue:ClaimsOps
+CLM202600090,EVT0090-07,7,Manual Adjudicated,2026-05-07,Examiner,Paid,
+CLM202600090,EVT0090-08,8,Payment Issued,2026-05-08,Finance,Closed,
+CLM202600091,EVT0091-01,1,Received,2026-03-24,System,Received,EDI
+CLM202600091,EVT0091-02,2,Eligibility+Edits,2026-03-24,System,Validated,exceptions
+CLM202600091,EVT0091-03,3,Pended,2026-03-25,System,Pended,Needs additional info
+CLM202600091,EVT0091-04,4,Info Received,2026-04-04,Provider,Rework,Added missing fields
+CLM202600091,EVT0091-05,5,Re-validated,2026-04-05,System,Validated,
+CLM202600091,EVT0091-06,6,Routed,2026-03-25,System,InReview,Queue:ClaimsOps
+CLM202600091,EVT0091-07,7,Manual Adjudicated,2026-03-27,Examiner,Paid,
+CLM202600091,EVT0091-08,8,Payment Issued,2026-04-01,Finance,Closed,
+CLM202600092,EVT0092-01,1,Received,2026-03-14,System,Received,Paper
+CLM202600092,EVT0092-02,2,Eligibility+Edits,2026-03-14,System,Validated,clean
+CLM202600092,EVT0092-03,3,Routed,2026-03-15,System,InReview,Queue:ClaimsOps
+CLM202600092,EVT0092-04,4,Manual Adjudicated,2026-03-17,Examiner,Paid,
+CLM202600092,EVT0092-05,5,Payment Issued,2026-03-24,Finance,Closed,
+CLM202600093,EVT0093-01,1,Received,2026-04-09,System,Received,EDI
+CLM202600093,EVT0093-02,2,Eligibility+Edits,2026-04-10,System,Validated,clean
+CLM202600093,EVT0093-03,3,Routed,2026-04-11,System,InReview,Queue:ClaimsOps
+CLM202600093,EVT0093-04,4,Manual Adjudicated,2026-04-16,Examiner,Paid,
+CLM202600093,EVT0093-05,5,Payment Issued,2026-04-17,Finance,Closed,
+CLM202600094,EVT0094-01,1,Received,2026-02-28,System,Received,EDI
+CLM202600094,EVT0094-02,2,Eligibility+Edits,2026-02-28,System,Validated,exceptions
+CLM202600094,EVT0094-03,3,Pended,2026-03-01,System,Pended,Needs additional info
+CLM202600094,EVT0094-04,4,Info Received,2026-03-11,Provider,Rework,Added missing fields
+CLM202600094,EVT0094-05,5,Re-validated,2026-03-12,System,Validated,
+CLM202600094,EVT0094-06,6,Auto Adjudicated,2026-03-03,RulesEngine,Paid,
+CLM202600094,EVT0094-07,7,Payment Issued,2026-03-04,Finance,Closed,
+CLM202600095,EVT0095-01,1,Received,2026-03-29,System,Received,EDI
+CLM202600095,EVT0095-02,2,Eligibility+Edits,2026-03-29,System,Validated,clean
+CLM202600095,EVT0095-03,3,Auto Adjudicated,2026-04-24,RulesEngine,Adjusted,
+CLM202600095,EVT0095-04,4,Payment Issued,2026-05-01,Finance,Closed,
+CLM202600096,EVT0096-01,1,Received,2026-02-25,System,Received,EDI
+CLM202600096,EVT0096-02,2,Eligibility+Edits,2026-02-26,System,Validated,clean
+CLM202600096,EVT0096-03,3,Auto Adjudicated,2026-03-11,RulesEngine,Pended,
+CLM202600096,EVT0096-04,4,Still Pended,2026-03-11,System,Pended,Awaiting response
+CLM202600097,EVT0097-01,1,Received,2026-04-21,System,Received,EDI
+CLM202600097,EVT0097-02,2,Eligibility+Edits,2026-04-21,System,Validated,clean
+CLM202600097,EVT0097-03,3,Routed,2026-04-22,System,InReview,Queue:ClaimsOps
+CLM202600097,EVT0097-04,4,Manual Adjudicated,2026-04-30,Examiner,Paid,
+CLM202600097,EVT0097-05,5,Payment Issued,2026-05-07,Finance,Closed,
+CLM202600098,EVT0098-01,1,Received,2026-04-07,System,Received,EDI
+CLM202600098,EVT0098-02,2,Eligibility+Edits,2026-04-08,System,Validated,clean
+CLM202600098,EVT0098-03,3,Auto Adjudicated,2026-04-15,RulesEngine,Denied,
+CLM202600098,EVT0098-04,4,Denial Notified,2026-04-16,System,Closed,CO-16
+CLM202600099,EVT0099-01,1,Received,2026-03-29,System,Received,EDI
+CLM202600099,EVT0099-02,2,Eligibility+Edits,2026-03-29,System,Validated,exceptions
+CLM202600099,EVT0099-03,3,Pended,2026-03-30,System,Pended,Needs additional info
+CLM202600099,EVT0099-04,4,Info Received,2026-04-03,Provider,Rework,Added missing fields
+CLM202600099,EVT0099-05,5,Re-validated,2026-04-04,System,Validated,
+CLM202600099,EVT0099-06,6,Routed,2026-03-30,System,InReview,Queue:ClaimsOps
+CLM202600099,EVT0099-07,7,Manual Adjudicated,2026-04-01,Examiner,Paid,
+CLM202600099,EVT0099-08,8,Payment Issued,2026-04-03,Finance,Closed,
+CLM202600100,EVT0100-01,1,Received,2026-01-22,System,Received,EDI
+CLM202600100,EVT0100-02,2,Eligibility+Edits,2026-01-22,System,Validated,clean
+CLM202600100,EVT0100-03,3,Auto Adjudicated,2026-01-27,RulesEngine,Paid,
+CLM202600100,EVT0100-04,4,Payment Issued,2026-01-28,Finance,Closed,

@@ -1,0 +1,65 @@
+How this supports GCO & MIS metrics (examples)
+GCO-style (business outcome)
+
+Volume: COUNT(claim_id)
+Paid $: SUM(total_paid_amt) (or line-level SUM(paid_amt))
+Denial rate: denied / total
+Partial denial rate: claim_status='PartiallyDenied'
+Regional/platform mix: group by platform/region
+Monthly trend: group by received_month or paid_month
+
+MIS-style (operational health)
+
+TAT: AVG(tat_days); SLA buckets
+Clean claim rate (FPY proxy): AVG(clean_claim_ind)
+Auto adjudication (touchless proxy): AVG(auto_adjudicated_ind)
+Pend rate: derived from events
+Rework rate proxy: claims having Info Received / Re-validated events
+Complexity proxy: line_count, event_count
+
+
+
+Column highlights (built specifically for metrics)
+Claim table (synthetic_claims_claims.csv)
+Useful for volume + operational metrics.
+
+platform (Nimbus/Orion/Vela) → platform distribution
+region (Northeast/Midwest/South/West) → regional splits
+lob (Commercial/Medicare/Medicaid)
+claim_type (Professional/Institutional/Dental/Pharmacy)
+submission_channel (EDI/Portal/Paper)
+clean_claim_ind (1/0) → clean claim rate / FPY proxy
+auto_adjudicated_ind (1/0) → auto rate / touchless proxy
+claim_status (Paid/Denied/PartiallyDenied/Pended/Adjusted)
+received_date, finalized_date, paid_date → TAT & monthly trend
+total_charge_amt, total_allowed_amt, total_paid_amt → paid/allowed trends
+tat_days → direct TAT metric
+line_count, event_count → complexity proxies
+
+Line table (synthetic_claims_lines.csv)
+Useful for service mix + denial at line.
+
+proc_code, dx_code, pos_code, rev_code
+line_status (Paid/Denied/Pended/Adjusted)
+denial_code, denial_desc
+charge_amt, allowed_amt, paid_amt
+
+Event table (synthetic_claims_events.csv)
+Useful for MIS / workflow metrics.
+
+event_type (Received, Eligibility+Edits, Pended, Info Received, Re-validated, Routed, Auto/Manual Adjudicated, Payment Issued, Denial Notified…)
+event_ts (date)
+event_actor (System/RulesEngine/Examiner/Provider/Finance)
+status_after
+event_seq (sequence per claim)
+
+
+Quick sanity summary of this generated dataset
+
+Claims: 100
+Lines: 166
+Events: 538
+Claim status mix: Paid 70, PartiallyDenied 11, Pended 8, Denied 6, Adjusted 5
+Date range (received): 2026-01-11 → 2026-05-23
+Platform distribution: Nimbus 49 / Orion 36 / Vela 15
+Region distribution: South 32 / Northeast 25 / Midwest 22 / West 21

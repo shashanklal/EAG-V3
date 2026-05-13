@@ -1,0 +1,18 @@
+WITH pend AS (
+  SELECT
+    claim_id,
+    MIN(CASE WHEN event_type='Pended' THEN to_date(event_ts) END) AS first_pend_dt,
+    MIN(CASE WHEN event_type IN ('Info Received','Re-validated') THEN to_date(event_ts) END) AS first_release_dt
+  FROM events
+  GROUP BY claim_id
+)
+SELECT
+  c.platform,
+  COUNT(*) AS total_claims,
+  SUM(CASE WHEN p.first_pend_dt IS NOT NULL THEN 1 ELSE 0 END) AS pended_claims,
+  ROUND(SUM(CASE WHEN p.first_pend_dt IS NOT NULL THEN 1 ELSE 0 END)/COUNT(*)*100,2) AS pend_rate_pct,
+  AVG(datediff(p.first_release_dt, p.first_pend_dt)) AS avg_pend_days
+FROM claims c
+LEFT JOIN pend p ON c.claim_id = p.claim_id
+GROUP BY c.platform
+ORDER BY pend_rate_pct DESC;

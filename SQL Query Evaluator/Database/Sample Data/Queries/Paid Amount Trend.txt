@@ -1,0 +1,8 @@
+SELECT
+  date_format(to_date(paid_date), 'yyyy-MM') AS paid_month,
+  platform,
+  SUM(total_paid_amt) AS paid_amt
+FROM claims
+WHERE paid_date IS NOT NULL AND paid_date <> ''
+GROUP BY 1,2
+ORDER BY 1,2;

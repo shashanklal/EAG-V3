@@ -1,0 +1,8 @@
+SELECT
+  denial_code,
+  denial_desc,
+  COUNT(*) AS claims_cnt
+FROM claims
+WHERE denial_code IS NOT NULL AND denial_code <> ''
+GROUP BY 1,2
+ORDER BY claims_cnt DESC;

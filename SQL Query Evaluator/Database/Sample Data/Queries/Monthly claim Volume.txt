@@ -1,0 +1,8 @@
+SELECT
+  date_format(to_date(received_date), 'yyyy-MM') AS received_month,
+  platform,
+  region,
+  COUNT(DISTINCT claim_id) AS claim_cnt
+FROM claims
+GROUP BY 1,2,3
+ORDER BY 1,2,3;

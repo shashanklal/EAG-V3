@@ -1,0 +1,18 @@
+WITH e AS (
+  SELECT
+    claim_id,
+    MAX(CASE WHEN event_type = 'Manual Adjudicated' THEN 1 ELSE 0 END) AS manual_touch,
+    MAX(CASE WHEN event_type = 'Auto Adjudicated' THEN 1 ELSE 0 END) AS auto_touch
+  FROM events
+  GROUP BY claim_id
+)
+SELECT
+  c.platform,
+  COUNT(*) AS claims,
+  SUM(e.manual_touch) AS manual_claims,
+  SUM(e.auto_touch) AS auto_claims,
+  ROUND(SUM(e.manual_touch)/COUNT(*)*100,2) AS manual_pct
+FROM claims c
+JOIN e ON c.claim_id = e.claim_id
+GROUP BY c.platform
+ORDER BY manual_pct DESC;

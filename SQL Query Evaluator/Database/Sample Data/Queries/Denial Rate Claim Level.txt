@@ -1,0 +1,11 @@
+SELECT
+  platform,
+  region,
+  COUNT(*) AS total_claims,
+  SUM(CASE WHEN claim_status IN ('Denied','PartiallyDenied') THEN 1 ELSE 0 END) AS denied_claims,
+  ROUND(
+    SUM(CASE WHEN claim_status IN ('Denied','PartiallyDenied') THEN 1 ELSE 0 END) / COUNT(*) * 100, 2
+  ) AS denial_rate_pct
+FROM claims
+GROUP BY 1,2
+ORDER BY denial_rate_pct DESC;

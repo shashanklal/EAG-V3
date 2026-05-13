@@ -1,0 +1,8 @@
+SELECT
+  platform,
+  COUNT(*) AS total_claims,
+  ROUND(AVG(clean_claim_ind) * 100, 2) AS clean_claim_rate_pct,
+  ROUND(AVG(auto_adjudicated_ind) * 100, 2) AS auto_adj_rate_pct
+FROM claims
+GROUP BY 1
+ORDER BY 1;

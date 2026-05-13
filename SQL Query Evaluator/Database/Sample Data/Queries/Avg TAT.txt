@@ -1,0 +1,10 @@
+SELECT
+  platform,
+  claim_type,
+  AVG(tat_days) AS avg_tat_days,
+  SUM(CASE WHEN tat_days <= 3 THEN 1 ELSE 0 END) AS sla_0_3,
+  SUM(CASE WHEN tat_days BETWEEN 4 AND 7 THEN 1 ELSE 0 END) AS sla_4_7,
+  SUM(CASE WHEN tat_days > 7 THEN 1 ELSE 0 END) AS sla_8_plus
+FROM claims
+GROUP BY 1,2
+ORDER BY 1,2;
