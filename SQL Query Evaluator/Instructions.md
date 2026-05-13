@@ -50,13 +50,5 @@ Instructions:
 
     The matching score of individual tools and final Weightage matching score should be calculated and shown as well on UI along with the respective SQL execution results.
 
-    The Prompt should match the Intention of the solution and match the evaluation criteria defined in "Prompt Validator.md"
-
-    The coding architecture should be same how its being done in "llm_gatewayV2" folder how prompts are defined through different properties in BaseProvider class and eventually cusomized for specific LLM model.
-    The "llm_gatewayV2" solution has a different business objective but LLM scaling logic should be referred.
-    File which can be ignored: cache.py, router.py, 
-    I want the customized models for "Claude Sonnet 4.6". Please refer the Clause API Docs as well for The context window with extended thinking and tool usage. The output from Tool 1 should go as additional input to Tool 2 and output from Tool 2 should go as additional input to Tool 3.
-    I will be using the databrick end point llm call as its done in "MCP\ Task" folder. Please use the same .env file.
     
-
 
