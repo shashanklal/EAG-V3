@@ -1,0 +1,450 @@
+[
+  {
+    "id": "93b9631f",
+    "kind": "tool_outcome",
+    "keywords": [
+      "Python",
+      "asyncio",
+      "best practices",
+      "search",
+      "concurrency",
+      "asynchronous programming"
+    ],
+    "descriptor": "The agent will perform a search for Python asyncio best practices and summarize the top 3 results.",
+    "value": {},
+    "artifact_id": null,
+    "source": "user_query",
+    "run_id": "67f1c984",
+    "goal_id": null,
+    "confidence": 0.95,
+    "created_at": "2026-05-19T12:33:17.321931"
+  },
+  {
+    "id": "9b1a941c",
+    "kind": "tool_outcome",
+    "keywords": [
+      "python",
+      "asyncio",
+      "3",
+      "web_search",
+      "practices",
+      "best"
+    ],
+    "descriptor": "web_search(query='Python asyncio best practices', max_results=3) \u2192 [artifact art:5ef364db6ea6f113, 6542 bytes] preview: {   \"ti",
+    "value": {
+      "tool": "web_search",
+      "arguments": {
+        "query": "Python asyncio best practices",
+        "max_results": 3
+      },
+      "result_preview": "[artifact art:5ef364db6ea6f113, 6542 bytes] preview: {   \"title\": \"Asyncio best practices - Async-SIG - Discussions on Python.org\",   \"url\": \"https://discuss.python.org/t/asyncio-best-practices/12576\""
+    },
+    "artifact_id": "art:5ef364db6ea6f113",
+    "source": "action:iter1",
+    "run_id": "67f1c984",
+    "goal_id": "1",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T12:33:28.760126"
+  },
+  {
+    "id": "4ab80d86",
+    "kind": "tool_outcome",
+    "keywords": [
+      "Claude Shannon",
+      "birth date",
+      "death date",
+      "information theory",
+      "contributions",
+      "Wikipedia"
+    ],
+    "descriptor": "The tool fetched Claude Shannon's Wikipedia page and extracted his birth and death dates, along with three key contributions to information theory.",
+    "value": {},
+    "artifact_id": null,
+    "source": "user_query",
+    "run_id": "13139590",
+    "goal_id": null,
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:30:57.751360"
+  },
+  {
+    "id": "eeae0965",
+    "kind": "tool_outcome",
+    "keywords": [
+      "fetch_url",
+      "https",
+      "wiki",
+      "claude",
+      "shannon",
+      "wikipedia",
+      "en",
+      "20",
+      "org"
+    ],
+    "descriptor": "fetch_url(url='https://en.wikipedia.org/wiki/Claude_Shannon', timeout=20) \u2192 [artifact art:2ccfa31da6ec67eb, 82221 bytes] preview: {   \"s",
+    "value": {
+      "tool": "fetch_url",
+      "arguments": {
+        "url": "https://en.wikipedia.org/wiki/Claude_Shannon",
+        "timeout": 20
+      },
+      "result_preview": "[artifact art:2ccfa31da6ec67eb, 82221 bytes] preview: {   \"status\": 200,   \"content_type\": \"text/plain\",   \"length_bytes\": 77547,   \"text\": \"Claude Shannon - Wikipedia\\nJump to content\\nFrom Wikipedia"
+    },
+    "artifact_id": "art:2ccfa31da6ec67eb",
+    "source": "action:iter1",
+    "run_id": "13139590",
+    "goal_id": "goal-1",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:31:11.178935"
+  },
+  {
+    "id": "75983396",
+    "kind": "tool_outcome",
+    "keywords": [
+      "Tokyo",
+      "weekend",
+      "family-friendly",
+      "activities",
+      "weather",
+      "forecast",
+      "Saturday"
+    ],
+    "descriptor": "The user wants to find family-friendly activities in Tokyo for this weekend and determine the best option based on Saturday's weather.",
+    "value": {},
+    "artifact_id": null,
+    "source": "user_query",
+    "run_id": "c3be43f6",
+    "goal_id": null,
+    "confidence": 0.8,
+    "created_at": "2026-05-19T15:32:01.115792"
+  },
+  {
+    "id": "320c55de",
+    "kind": "tool_outcome",
+    "keywords": [
+      "activities",
+      "family",
+      "tokyo",
+      "weekend",
+      "friendly",
+      "web_search",
+      "2024",
+      "5"
+    ],
+    "descriptor": "web_search(query='family-friendly activities Tokyo weekend 2024', max_results=5) \u2192 [artifact art:4bf610efe051d4d8, 11437 bytes] preview: {   \"t",
+    "value": {
+      "tool": "web_search",
+      "arguments": {
+        "query": "family-friendly activities Tokyo weekend 2024",
+        "max_results": 5
+      },
+      "result_preview": "[artifact art:4bf610efe051d4d8, 11437 bytes] preview: {   \"title\": \"Tokyo With Kids - 53 Things To Do Guide + Photos - Plan My Japan\",   \"url\": \"https://www.planmyjapan.com/tokyo-with-kids-things-to-d"
+    },
+    "artifact_id": "art:4bf610efe051d4d8",
+    "source": "action:iter1",
+    "run_id": "c3be43f6",
+    "goal_id": "1",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:32:17.132774"
+  },
+  {
+    "id": "494f813b",
+    "kind": "tool_outcome",
+    "keywords": [
+      "tokyo",
+      "forecast",
+      "weather",
+      "web_search",
+      "saturday",
+      "3"
+    ],
+    "descriptor": "web_search(query='Tokyo weather forecast Saturday', max_results=3) \u2192 [artifact art:5f5ca6af7cfaedaa, 6016 bytes] preview: {   \"ti",
+    "value": {
+      "tool": "web_search",
+      "arguments": {
+        "query": "Tokyo weather forecast Saturday",
+        "max_results": 3
+      },
+      "result_preview": "[artifact art:5f5ca6af7cfaedaa, 6016 bytes] preview: {   \"title\": \"Japan weather in May 2026 - Weather25.com\",   \"url\": \"https://www.weather25.com/asia/japan?page=month&month=May\",   \"snippet\": \"weath"
+    },
+    "artifact_id": "art:5f5ca6af7cfaedaa",
+    "source": "action:iter2",
+    "run_id": "c3be43f6",
+    "goal_id": "2",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:32:35.701496"
+  },
+  {
+    "id": "d42cbd18",
+    "kind": "tool_outcome",
+    "keywords": [
+      "www",
+      "japan",
+      "tokyo",
+      "asia",
+      "weather",
+      "forecast",
+      "weather25",
+      "https",
+      "com",
+      "fetch_url"
+    ],
+    "descriptor": "fetch_url(url='https://www.weather25.com/asia/japan/tokyo/weather-forecast') \u2192 {\n  \"status\": 404,\n  \"content_type\": \"text/plain\",\n  \"length",
+    "value": {
+      "tool": "fetch_url",
+      "arguments": {
+        "url": "https://www.weather25.com/asia/japan/tokyo/weather-forecast"
+      },
+      "result_preview": "{\n  \"status\": 404,\n  \"content_type\": \"text/plain\",\n  \"length_bytes\": 162,\n  \"text\": \"404 - Page not found\\nPage Not Found\\nAustralia Weather\\nAustralia weather in June\\nAustralia weather in May\\nAustr"
+    },
+    "artifact_id": null,
+    "source": "action:iter3",
+    "run_id": "c3be43f6",
+    "goal_id": "3",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:32:50.270018"
+  },
+  {
+    "id": "1f8c62bb",
+    "kind": "tool_outcome",
+    "keywords": [
+      "tokyo",
+      "forecast",
+      "tomorrow",
+      "weather",
+      "web_search",
+      "today",
+      "3"
+    ],
+    "descriptor": "web_search(query='Tokyo weather today tomorrow forecast', max_results=3) \u2192 [artifact art:f4832fc1f77675bd, 6140 bytes] preview: {   \"ti",
+    "value": {
+      "tool": "web_search",
+      "arguments": {
+        "query": "Tokyo weather today tomorrow forecast",
+        "max_results": 3
+      },
+      "result_preview": "[artifact art:f4832fc1f77675bd, 6140 bytes] preview: {   \"title\": \"Japan weather in May 2026 | Japan 14 day weather\",   \"url\": \"https://www.weather25.com/asia/japan?page=month&month=May\",   \"snippet\":"
+    },
+    "artifact_id": "art:f4832fc1f77675bd",
+    "source": "action:iter4",
+    "run_id": "c3be43f6",
+    "goal_id": "3",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:33:09.423295"
+  },
+  {
+    "id": "6abed447",
+    "kind": "fact",
+    "keywords": [
+      "mom",
+      "birthday",
+      "May",
+      "2026",
+      "reminder",
+      "calendar"
+    ],
+    "descriptor": "The user's mom's birthday is May 15, 2026, and they want a calendar reminder.",
+    "value": {},
+    "artifact_id": null,
+    "source": "user_query",
+    "run_id": "1975400f",
+    "goal_id": null,
+    "confidence": 0.95,
+    "created_at": "2026-05-19T15:33:42.938820"
+  },
+  {
+    "id": "f86e599f",
+    "kind": "tool_outcome",
+    "keywords": [
+      "2026",
+      "birthday",
+      "type",
+      "event",
+      "s",
+      "create_file",
+      "user",
+      "mom",
+      "reminders",
+      "date",
+      "note",
+      "reminder"
+    ],
+    "descriptor": "create_file(path='reminders/mom_birthday_reminder.txt', content=\"Mom's Birthday Reminder\\n\\nDate: May 15, 2026\\nEvent: Mom's Birthday\\nType: Calendar Reminder\\n\\nNote: User requested a calendar reminder for their mom's birthday on May 15, 2026.\") \u2192 {\n  \"ok\": true,\n  \"path\": \"reminders/mom_birthday_reminder.t",
+    "value": {
+      "tool": "create_file",
+      "arguments": {
+        "path": "reminders/mom_birthday_reminder.txt",
+        "content": "Mom's Birthday Reminder\n\nDate: May 15, 2026\nEvent: Mom's Birthday\nType: Calendar Reminder\n\nNote: User requested a calendar reminder for their mom's birthday on May 15, 2026."
+      },
+      "result_preview": "{\n  \"ok\": true,\n  \"path\": \"reminders/mom_birthday_reminder.txt\",\n  \"size_bytes\": 179\n}"
+    },
+    "artifact_id": null,
+    "source": "action:iter1",
+    "run_id": "1975400f",
+    "goal_id": "1",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:33:56.759842"
+  },
+  {
+    "id": "0c2e648b",
+    "kind": "tool_outcome",
+    "keywords": [
+      "invitations",
+      "create_file",
+      "reservations",
+      "reminders",
+      "type",
+      "dinner",
+      "advance",
+      "2026",
+      "any",
+      "use",
+      "party",
+      "send"
+    ],
+    "descriptor": "create_file(path='reminders/mom_birthday_two_weeks_reminder.txt', content=\"Mom's Birthday - Two Week Advance Reminder\\n\\nReminder Date: May 1, 2026\\nEvent Date: May 15, 2026\\nEvent: Mom's Birthday\\nType: Calendar Reminder (2 weeks advance)\\n\\nNote: This is a two-week advance reminder for mom's birthday on May 15, 2026. Use this time to:\\n- Plan birthday celebration\\n- Purchase gift\\n- Make dinner reservations if needed\\n- Send invitations for any party\") \u2192 {\n  \"ok\": true,\n  \"path\": \"reminders/mom_birthday_two_weeks_",
+    "value": {
+      "tool": "create_file",
+      "arguments": {
+        "path": "reminders/mom_birthday_two_weeks_reminder.txt",
+        "content": "Mom's Birthday - Two Week Advance Reminder\n\nReminder Date: May 1, 2026\nEvent Date: May 15, 2026\nEvent: Mom's Birthday\nType: Calendar Reminder (2 weeks advance)\n\nNote: This is a two-week advance reminder for mom's birthday on May 15, 2026. Use this time to:\n- Plan birthday celebration\n- Purchase gift\n- Make dinner reservations if needed\n- Send invitations for any party"
+      },
+      "result_preview": "{\n  \"ok\": true,\n  \"path\": \"reminders/mom_birthday_two_weeks_reminder.txt\",\n  \"size_bytes\": 381\n}"
+    },
+    "artifact_id": null,
+    "source": "action:iter2",
+    "run_id": "1975400f",
+    "goal_id": "2",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:34:10.742078"
+  },
+  {
+    "id": "045b4dd1",
+    "kind": "tool_outcome",
+    "keywords": [
+      "please",
+      "create_file",
+      "reminders",
+      "per",
+      "type",
+      "2026",
+      "any",
+      "request",
+      "reminder",
+      "15",
+      "schedule",
+      "check"
+    ],
+    "descriptor": "create_file(path='reminders/may_15_2026_calendar_reminder.txt', content='Calendar Reminder - May 15, 2026\\n\\nDate: May 15, 2026\\nType: Calendar Reminder\\nCreated: Per user request\\n\\nThis is a calendar reminder for May 15, 2026. Please check your calendar and schedule accordingly for any events or appointments on this date.') \u2192 {\n  \"ok\": true,\n  \"path\": \"reminders/may_15_2026_calendar_re",
+    "value": {
+      "tool": "create_file",
+      "arguments": {
+        "path": "reminders/may_15_2026_calendar_reminder.txt",
+        "content": "Calendar Reminder - May 15, 2026\n\nDate: May 15, 2026\nType: Calendar Reminder\nCreated: Per user request\n\nThis is a calendar reminder for May 15, 2026. Please check your calendar and schedule accordingly for any events or appointments on this date."
+      },
+      "result_preview": "{\n  \"ok\": true,\n  \"path\": \"reminders/may_15_2026_calendar_reminder.txt\",\n  \"size_bytes\": 252\n}"
+    },
+    "artifact_id": null,
+    "source": "action:iter3",
+    "run_id": "1975400f",
+    "goal_id": "3",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:34:22.610008"
+  },
+  {
+    "id": "3dfc1be6",
+    "kind": "scratchpad",
+    "keywords": [
+      "mom",
+      "birthday",
+      "date",
+      "question"
+    ],
+    "descriptor": "The user is asking about their mom's birthday.",
+    "value": {},
+    "artifact_id": null,
+    "source": "user_query",
+    "run_id": "a643eacf",
+    "goal_id": null,
+    "confidence": 0.3,
+    "created_at": "2026-05-19T15:34:39.674460"
+  },
+  {
+    "id": "3abb89e5",
+    "kind": "tool_outcome",
+    "keywords": [
+      "Python",
+      "asyncio",
+      "best practices",
+      "search",
+      "concurrency",
+      "asynchronous programming"
+    ],
+    "descriptor": "The agent will perform a search for Python asyncio best practices and summarize the top 3 results.",
+    "value": {},
+    "artifact_id": null,
+    "source": "user_query",
+    "run_id": "96e4d74b",
+    "goal_id": null,
+    "confidence": 0.95,
+    "created_at": "2026-05-19T15:35:12.868228"
+  },
+  {
+    "id": "a386f7bb",
+    "kind": "tool_outcome",
+    "keywords": [
+      "practices",
+      "best",
+      "asyncio",
+      "python",
+      "web_search",
+      "3"
+    ],
+    "descriptor": "web_search(query='Python asyncio best practices', max_results='3') \u2192 [artifact art:be6414db0a50f79a, 6839 bytes] preview: {   \"ti",
+    "value": {
+      "tool": "web_search",
+      "arguments": {
+        "query": "Python asyncio best practices",
+        "max_results": "3"
+      },
+      "result_preview": "[artifact art:be6414db0a50f79a, 6839 bytes] preview: {   \"title\": \"Asyncio best practices - Async-SIG - Discussions on Python.org\",   \"url\": \"https://discuss.python.org/t/asyncio-best-practices/12576\""
+    },
+    "artifact_id": "art:be6414db0a50f79a",
+    "source": "action:iter1",
+    "run_id": "96e4d74b",
+    "goal_id": "1",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:35:25.427352"
+  },
+  {
+    "id": "3a1bc706",
+    "kind": "tool_outcome",
+    "keywords": [
+      "sig",
+      "fetch_url",
+      "20",
+      "practices",
+      "async",
+      "www",
+      "best",
+      "asyncio",
+      "https",
+      "org",
+      "wiki"
+    ],
+    "descriptor": "fetch_url(url='https://www.async-sig.org/wiki/asyncio-best-practices', timeout=20) \u2192 Error executing tool fetch_url: [Errno 11001] getaddrinfo fa",
+    "value": {
+      "tool": "fetch_url",
+      "arguments": {
+        "url": "https://www.async-sig.org/wiki/asyncio-best-practices",
+        "timeout": 20
+      },
+      "result_preview": "Error executing tool fetch_url: [Errno 11001] getaddrinfo failed"
+    },
+    "artifact_id": null,
+    "source": "action:iter2",
+    "run_id": "96e4d74b",
+    "goal_id": "2",
+    "confidence": 1.0,
+    "created_at": "2026-05-19T15:35:34.570019"
+  }
+]

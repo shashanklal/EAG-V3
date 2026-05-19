@@ -1,0 +1,7 @@
+Mom's Birthday Reminder
+
+Date: May 15, 2026
+Event: Mom's Birthday
+Type: Calendar Reminder
+
+Note: User requested a calendar reminder for their mom's birthday on May 15, 2026.
