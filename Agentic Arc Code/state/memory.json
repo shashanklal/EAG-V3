@@ -1,0 +1,52 @@
+[
+  {
+    "id": "f64c9ed2",
+    "kind": "tool_outcome",
+    "keywords": [
+      "Claude Shannon",
+      "birth date",
+      "death date",
+      "information theory",
+      "contributions",
+      "Wikipedia"
+    ],
+    "descriptor": "The tool fetched Claude Shannon's Wikipedia page and extracted his birth and death dates, and three key contributions to information theory.",
+    "value": {},
+    "artifact_id": null,
+    "source": "user_query",
+    "run_id": "94d9d92d",
+    "goal_id": null,
+    "confidence": 0.9,
+    "created_at": "2026-05-20T07:28:43.737018"
+  },
+  {
+    "id": "1dfa6099",
+    "kind": "tool_outcome",
+    "keywords": [
+      "https",
+      "20",
+      "wiki",
+      "shannon",
+      "en",
+      "fetch_url",
+      "claude",
+      "org",
+      "wikipedia"
+    ],
+    "descriptor": "fetch_url(url='https://en.wikipedia.org/wiki/Claude_Shannon', timeout=20) \u2192 [artifact art:2ccfa31da6ec67eb, 82221 bytes] preview: {   \"s",
+    "value": {
+      "tool": "fetch_url",
+      "arguments": {
+        "url": "https://en.wikipedia.org/wiki/Claude_Shannon",
+        "timeout": 20
+      },
+      "result_preview": "[artifact art:2ccfa31da6ec67eb, 82221 bytes] preview: {   \"status\": 200,   \"content_type\": \"text/plain\",   \"length_bytes\": 77547,   \"text\": \"Claude Shannon - Wikipedia\\nJump to content\\nFrom Wikipedia"
+    },
+    "artifact_id": "art:2ccfa31da6ec67eb",
+    "source": "action:iter1",
+    "run_id": "94d9d92d",
+    "goal_id": "goal1",
+    "confidence": 1.0,
+    "created_at": "2026-05-20T07:28:54.776105"
+  }
+]

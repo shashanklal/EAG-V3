@@ -1,0 +1,29 @@
+[project]
+name = "agentic-architecture"
+version = "1.0.0"
+description = "Goal-iterating agentic architecture with four cognitive layers"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.6",
+    "mcp>=1.0",
+    "httpx>=0.27",
+    "python-dotenv>=1.0",
+    "tavily-python>=0.3",
+    "duckduckgo-search>=6.0",
+    "beautifulsoup4>=4.12",
+]
+
+[project.scripts]
+agent = "agent:main"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+[tool.uv.sources]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
