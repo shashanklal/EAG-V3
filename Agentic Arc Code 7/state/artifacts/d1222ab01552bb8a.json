@@ -1,0 +1,8 @@
+{
+  "id": "art:d1222ab01552bb8a",
+  "content_type": "text/plain",
+  "size_bytes": 5400,
+  "source": "mcp:index_document",
+  "descriptor": "index_document({\"path\": \"claims/\", \"chunk_size\": 400, \"overlap\": 80}) → 5400 bytes",
+  "created_at": "2026-05-27T12:37:31.808992"
+}

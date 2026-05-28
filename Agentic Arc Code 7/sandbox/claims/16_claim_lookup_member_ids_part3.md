@@ -1,0 +1,46 @@
+# Claim Lookup - Member IDs Part 3
+
+Synthetic member ID to member name mapping based on sample IDs.
+
+- **MBR100300**: Member 051
+- **MBR100302**: Member 052
+- **MBR100309**: Member 053
+- **MBR100317**: Member 054
+- **MBR100320**: Member 055
+- **MBR100323**: Member 056
+- **MBR100329**: Member 057
+- **MBR100340**: Member 058
+- **MBR100341**: Member 059
+- **MBR100351**: Member 060
+- **MBR100358**: Member 061
+- **MBR100360**: Member 062
+- **MBR100374**: Member 063
+- **MBR100382**: Member 064
+- **MBR100390**: Member 065
+- **MBR100410**: Member 066
+- **MBR100413**: Member 067
+- **MBR100417**: Member 068
+- **MBR100437**: Member 069
+- **MBR100440**: Member 070
+- **MBR100461**: Member 071
+- **MBR100464**: Member 072
+- **MBR100465**: Member 073
+- **MBR100475**: Member 074
+- **MBR100484**: Member 075
+- **MBR100488**: Member 076
+- **MBR100492**: Member 077
+- **MBR100499**: Member 078
+- **MBR100504**: Member 079
+- **MBR100520**: Member 080
+- **MBR100529**: Member 081
+- **MBR100533**: Member 082
+- **MBR100539**: Member 083
+- **MBR100551**: Member 084
+- **MBR100565**: Member 085
+- **MBR100567**: Member 086
+- **MBR100570**: Member 087
+- **MBR100576**: Member 088
+- **MBR100579**: Member 089
+- **MBR100582**: Member 090
+- **MBR100589**: Member 091
+- **MBR100595**: Member 092

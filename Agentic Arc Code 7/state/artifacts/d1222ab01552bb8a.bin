@@ -1,0 +1,245 @@
+{
+  "path": "claims/",
+  "files_indexed": 59,
+  "total_chunks_indexed": 75,
+  "chunk_size": 2000,
+  "overlap": 200,
+  "details": [
+    {
+      "file": "claims/01_claim_create_features_core.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/02_claim_create_features_line_and_financial.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/03_claim_intake_core.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/04_claim_intake_matching_and_exceptions.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/05_claim_adjudication_decision_and_payment.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/06_claim_adjudication_controls_and_review.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/07_claim_rework_core.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/08_claim_rework_operations.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/09_claim_event_core.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/10_claim_event_extended.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/11_claim_lookup_provider_ids_part1.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/12_claim_lookup_provider_ids_part2.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/13_claim_lookup_provider_ids_part3.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/14_claim_lookup_member_ids_part1.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/15_claim_lookup_member_ids_part2.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/16_claim_lookup_member_ids_part3.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/17_claim_lookup_procedure_codes.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/18_claim_lookup_revenue_codes.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/19_claim_lookup_pos_codes.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/20_claim_lookup_dx_codes_part1.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/21_claim_lookup_dx_codes_part2.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/22_claim_lookup_denial_codes.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/23_claim_lookup_platforms.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/24_claim_lookup_policy_ids_part1.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/25_claim_lookup_policy_ids_part2.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/26_claim_lookup_policy_ids_part3.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/27_claim_lookup_group_ids.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/28_claim_lookup_claim_types.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/29_claim_lookup_line_of_business.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/30_claim_lookup_submission_channels.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/31_claim_lookup_network_indicators.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/32_claim_lookup_funding_arrangements.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/37_claim_denial_gap_member_explanation_core.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/38_claim_denial_gap_member_explanation_documents.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/39_claim_denial_reason_playbook.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/40_claim_lifecycle_overview.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/41_claim_status_dictionary.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/42_claim_actor_dictionary.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/43_claim_clean_claim_logic.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/44_claim_auto_vs_manual_adjudication.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/45_claim_financial_amounts_dictionary.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/46_claim_timeline_fields.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/47_claim_common_user_questions.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/48_claim_sample_query_patterns.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/49_claim_data_quality_checks.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/50_claim_joining_guide.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/51_claim_ai_agent_usage_notes.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/52_claim_glossary.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/53_claim_denial_prevention_tips.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/54_claim_event_type_reference.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/55_claim_sample_dataset_profile.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/claim_metadata_claim_level.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/claim_metadata_event_level.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/claim_metadata_flat_level.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/claim_metadata_line_level.md",
+      "chunks": 1
+    },
+    {
+      "file": "claims/synthetic_claims_claims_data_dump.md",
+      "chunks": 4
+    },
+    {
+      "file": "claims/synthetic_claims_events_data_dump.md",
+      "chunks": 6
+    },
+    {
+      "file": "claims/synthetic_claims_flat_data_dump.md",
+      "chunks": 7
+    },
+    {
+      "file": "claims/synthetic_claims_lines_data_dump.md",
+      "chunks": 3
+    }
+  ]
+}

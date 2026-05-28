@@ -1,0 +1,47 @@
+# Claim Lookup - Provider IDs Part 3
+
+Synthetic provider ID to provider name mapping based on sample IDs.
+
+- **PRV20141**: Provider 141 Health Partners
+- **PRV20143**: Provider 143 Health Partners
+- **PRV20145**: Provider 145 Health Partners
+- **PRV20147**: Provider 147 Health Partners
+- **PRV20150**: Provider 150 Health Partners
+- **PRV20151**: Provider 151 Health Partners
+- **PRV20152**: Provider 152 Health Partners
+- **PRV20153**: Provider 153 Health Partners
+- **PRV20157**: Provider 157 Health Partners
+- **PRV20158**: Provider 158 Health Partners
+- **PRV20165**: Provider 165 Health Partners
+- **PRV20166**: Provider 166 Health Partners
+- **PRV20170**: Provider 170 Health Partners
+- **PRV20172**: Provider 172 Health Partners
+- **PRV20174**: Provider 174 Health Partners
+- **PRV20176**: Provider 176 Health Partners
+- **PRV20179**: Provider 179 Health Partners
+- **PRV20180**: Provider 180 Health Partners
+- **PRV20182**: Provider 182 Health Partners
+- **PRV20184**: Provider 184 Health Partners
+- **PRV20187**: Provider 187 Health Partners
+- **PRV20191**: Provider 191 Health Partners
+- **PRV20192**: Provider 192 Health Partners
+- **PRV20194**: Provider 194 Health Partners
+- **PRV20198**: Provider 198 Health Partners
+- **PRV20199**: Provider 199 Health Partners
+- **PRV20200**: Provider 200 Health Partners
+- **PRV20202**: Provider 202 Health Partners
+- **PRV20206**: Provider 206 Health Partners
+- **PRV20212**: Provider 212 Health Partners
+- **PRV20216**: Provider 216 Health Partners
+- **PRV20221**: Provider 221 Health Partners
+- **PRV20223**: Provider 223 Health Partners
+- **PRV20226**: Provider 226 Health Partners
+- **PRV20231**: Provider 231 Health Partners
+- **PRV20232**: Provider 232 Health Partners
+- **PRV20233**: Provider 233 Health Partners
+- **PRV20235**: Provider 235 Health Partners
+- **PRV20237**: Provider 237 Health Partners
+- **PRV20242**: Provider 242 Health Partners
+- **PRV20243**: Provider 243 Health Partners
+- **PRV20247**: Provider 247 Health Partners
+- **PRV20248**: Provider 248 Health Partners

@@ -1,0 +1,39 @@
+# Claim Lookup - Policy IDs Part 2
+
+Synthetic policy lookup showing policy ID to short plan description.
+
+- **POL400170**: Policy 170 - Enhanced network and cost-share package
+- **POL400177**: Policy 177 - Enhanced network and cost-share package
+- **POL400194**: Policy 194 - Enhanced network and cost-share package
+- **POL400195**: Policy 195 - Enhanced network and cost-share package
+- **POL400199**: Policy 199 - Enhanced network and cost-share package
+- **POL400202**: Policy 202 - Enhanced network and cost-share package
+- **POL400205**: Policy 205 - Enhanced network and cost-share package
+- **POL400210**: Policy 210 - Enhanced network and cost-share package
+- **POL400215**: Policy 215 - Enhanced network and cost-share package
+- **POL400219**: Policy 219 - Enhanced network and cost-share package
+- **POL400220**: Policy 220 - Enhanced network and cost-share package
+- **POL400224**: Policy 224 - Enhanced network and cost-share package
+- **POL400226**: Policy 226 - Enhanced network and cost-share package
+- **POL400238**: Policy 238 - Enhanced network and cost-share package
+- **POL400241**: Policy 241 - Enhanced network and cost-share package
+- **POL400243**: Policy 243 - Enhanced network and cost-share package
+- **POL400247**: Policy 247 - Enhanced network and cost-share package
+- **POL400250**: Policy 250 - Enhanced network and cost-share package
+- **POL400258**: Policy 258 - Enhanced network and cost-share package
+- **POL400259**: Policy 259 - Enhanced network and cost-share package
+- **POL400264**: Policy 264 - Enhanced network and cost-share package
+- **POL400270**: Policy 270 - Enhanced network and cost-share package
+- **POL400271**: Policy 271 - Enhanced network and cost-share package
+- **POL400275**: Policy 275 - Enhanced network and cost-share package
+- **POL400283**: Policy 283 - Enhanced network and cost-share package
+- **POL400286**: Policy 286 - Enhanced network and cost-share package
+- **POL400287**: Policy 287 - Enhanced network and cost-share package
+- **POL400292**: Policy 292 - Enhanced network and cost-share package
+- **POL400293**: Policy 293 - Enhanced network and cost-share package
+- **POL400298**: Policy 298 - Enhanced network and cost-share package
+- **POL400303**: Policy 303 - Enhanced network and cost-share package
+- **POL400305**: Policy 305 - Enhanced network and cost-share package
+- **POL400307**: Policy 307 - Enhanced network and cost-share package
+- **POL400319**: Policy 319 - Enhanced network and cost-share package
+- **POL400321**: Policy 321 - Enhanced network and cost-share package
