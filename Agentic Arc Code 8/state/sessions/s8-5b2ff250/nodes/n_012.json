@@ -1,0 +1,36 @@
+{
+  "node_id": "n:12",
+  "skill": "researcher",
+  "status": "complete",
+  "inputs": [
+    "USER_QUERY"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "researcher",
+    "output": {
+      "question": "Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.",
+      "sources": [
+        {
+          "url": "https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/hospital-readmissions-reduction-program-hrrp",
+          "title": "Hospital Readmissions Reduction Program | CMS"
+        },
+        {
+          "url": "https://www.definitivehc.com/resources/healthcare-insights/hospital-readmission-rate-penalties",
+          "title": "Hospitals with the Highest Readmission Penalties in the U.S."
+        }
+      ],
+      "findings": "The Hospital Readmissions Reduction Program is a Medicare value-based purchasing program that began in fiscal year 2013 to reduce payments to hospitals with excess readmissions. The program penalizes hospitals for excessive 30-day readmissions in six specific conditions: acute myocardial infarction chronic obstructive pulmonary disease heart failure pneumonia coronary artery bypass graft surgery and elective primary total hip or knee arthroplasty.\n\nPenalties are calculated based on a hospital's excess readmission ratio compared to national averages with payment reductions capped at 3 percent of Medicare fee-for-service base operating diagnosis-related group payments. Hospitals with readmission ratios of one or less receive no penalties while those with higher ratios face increasing penalty rates up to the maximum 3 percent reduction.\n\nThe program applies payment reductions to all Medicare fee-for-service payments during the fiscal year from October 1 to September 30. CMS sends confidential Hospital-Specific Reports annually and provides hospitals 30 days to review their data and request corrections before finalizing penalties.\n\nBeginning in fiscal year 2019 CMS implemented peer grouping methodology to assess hospital performance relative to other hospitals with similar proportions of dual-eligible Medicare and Medicaid beneficiaries. This change was mandated by the 21st Century Cures Act to maintain budget neutrality while accounting for socioeconomic factors affecting readmission rates."
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 60.29230713844299,
+    "provider": "claude_s4",
+    "error": null
+  },
+  "prompt_sent": "You are the Researcher skill. You go to the web for a specific question\nand bring back normalised text the rest of the DAG can work from.\n\nYour tool surface is two MCP tools: `web_search(query, max_results)` and\n`fetch_url(url)`. Use them. Do not narrate; do not invent other tools.\n\nProcedure:\n  1. Read the QUESTION in the prompt.\n  2. Issue ONE `web_search` to get candidate URLs.\n  3. Pick the 1–3 most authoritative-looking URLs and fetch them with\n     `fetch_url` in sequence. Avoid clearly low-signal results (aggregator\n     spam, ad redirects).\n  4. Synthesise the relevant content from the fetched pages.\n\nTime budget: keep tool calls to 4 max per invocation. If a `fetch_url`\nreturns very little usable text, do not retry; move on.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"question\": \"<the question this run answered>\",\n    \"sources\": [{\"url\": \"<url>\", \"title\": \"<title>\"}, ...],\n    \"findings\": \"<2–6 short paragraphs of normalised text>\"\n  }\n\nYou do NOT produce the final user-facing answer. The downstream\ndistiller or formatter does that. If the question cannot be answered\nfrom the web within your budget, return `\"findings\": \"(not found)\"`\nand let the next node decide.\n\nUSER_QUERY: Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\n\nINPUTS:\n[\n  {\n    \"id\": \"USER_QUERY\",\n    \"kind\": \"query\",\n    \"value\": \"Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\"\n  }\n]",
+  "started_at": 1780328340.8440435,
+  "completed_at": 1780328401.1363506,
+  "retries": 0
+}

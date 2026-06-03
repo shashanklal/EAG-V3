@@ -1,0 +1,26 @@
+{
+  "node_id": "n:9",
+  "skill": "critic",
+  "status": "complete",
+  "inputs": [
+    "n:8"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "critic",
+    "output": {
+      "verdict": "fail",
+      "rationale": "The upstream output correctly states no findings were available but the summariser produced a summary instead of acknowledging the lack of data. The task required 4 factual bullets which cannot be generated from zero sources."
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 4.142887592315674,
+    "provider": "qwen3_80b",
+    "error": null
+  },
+  "prompt_sent": "You are the Critic skill. You evaluate one upstream node's output and\nreturn pass-or-fail with a short rationale.\n\nYou make no tool calls. The upstream output and (when the orchestrator\nhas it) the inputs that node received both appear in the prompt.\n\nProcedure:\n  1. Read the UPSTREAM_OUTPUT.\n  2. Check it against the INPUTS that produced it.\n  3. Look for: fabricated fields, claims unsupported by the input,\n     contradictions, missing fields the input clearly contained.\n  4. Emit pass or fail.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"verdict\": \"pass\" | \"fail\",\n    \"rationale\": \"<one or two short sentences>\"\n  }\n\nWhen you emit `fail`, the orchestrator may invoke the Planner to\nrecover. Be specific in your rationale so the recovery plan can be\ntargeted. Do not fail for stylistic reasons; only fail when the\nupstream output is wrong, missing, or unsupported.\n\nUSER_QUERY: Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\n\nINPUTS:\n[\n  {\n    \"id\": \"n:8\",\n    \"kind\": \"upstream\",\n    \"skill\": \"summariser\",\n    \"output\": {\n      \"summary\": \"The upstream Researcher skill returned no findings for the query about CMS Hospital Readmissions Reduction Program penalties (result was 'not found' with zero sources). No factual content was available to summarize. A re-query or alternative source retrieval would be needed to produce accurate bullet points. Generating invented facts would risk misinformation and is therefore not done here.\",\n      \"preserved_facts\": [\n        \"Researcher skill returned 'not found' for the HRRP penalties query\",\n        \"Zero sources were provided in the upstream output\",\n        \"No load-bearing facts were available to extract or summarize\"\n      ]\n    }\n  }\n]",
+  "started_at": 1780328330.8988795,
+  "completed_at": 1780328335.0417671,
+  "retries": 0
+}

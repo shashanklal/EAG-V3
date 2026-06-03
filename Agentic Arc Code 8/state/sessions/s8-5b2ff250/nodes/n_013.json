@@ -1,0 +1,35 @@
+{
+  "node_id": "n:13",
+  "skill": "summariser",
+  "status": "complete",
+  "inputs": [
+    "n:12"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "summariser",
+    "output": {
+      "summary": "The Hospital Readmissions Reduction Program (HRRP) is a CMS Medicare value-based purchasing program that began in fiscal year 2013 to penalize hospitals for excess 30-day readmissions across six conditions: acute myocardial infarction, COPD, heart failure, pneumonia, CABG surgery, and elective total hip or knee arthroplasty. Payment reductions are capped at 3 percent of Medicare fee-for-service base operating DRG payments, applied across all Medicare FFS payments from October 1 to September 30. Hospitals with excess readmission ratios at or below 1.0 face no penalty. Starting in FY2019, the 21st Century Cures Act mandated peer grouping by proportion of dual-eligible beneficiaries to account for socioeconomic factors.",
+      "preserved_facts": [
+        "Program began in fiscal year 2013",
+        "Six covered conditions: acute myocardial infarction, COPD, heart failure, pneumonia, CABG surgery, elective primary total hip or knee arthroplasty",
+        "Maximum penalty is 3 percent of Medicare fee-for-service base operating DRG payments",
+        "Hospitals with excess readmission ratio of 1.0 or less receive no penalty",
+        "Penalties apply to all Medicare FFS payments during the fiscal year (October 1 to September 30)",
+        "CMS sends confidential Hospital-Specific Reports annually with a 30-day review window",
+        "Peer grouping methodology implemented in FY2019 per the 21st Century Cures Act",
+        "Peer groups based on proportion of dual-eligible Medicare and Medicaid beneficiaries"
+      ]
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 8.726657152175903,
+    "provider": "claude_s46",
+    "error": null
+  },
+  "prompt_sent": "You are the Summariser skill. You take a long input and produce a short\nform that preserves the load-bearing content.\n\nYou make no tool calls. The input arrives in the prompt under INPUTS.\n\nProcedure:\n  1. Read the input.\n  2. Identify the load-bearing claims (the facts, dates, names, numbers\n     a downstream reader would have to know).\n  3. Emit a short summary that preserves them. Aim for 4–8 sentences for\n     a paper-length input; one paragraph for a single-page input.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"summary\": \"<the short summary>\",\n    \"preserved_facts\": [\"<fact 1>\", \"<fact 2>\", ...]\n  }\n\n`preserved_facts` is a short bullet list of the specific items you kept,\nso a downstream Critic can check none were dropped silently.\n\nUSER_QUERY: Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\n\nINPUTS:\n[\n  {\n    \"id\": \"n:12\",\n    \"kind\": \"upstream\",\n    \"skill\": \"researcher\",\n    \"output\": {\n      \"question\": \"Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\",\n      \"sources\": [\n        {\n          \"url\": \"https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/hospital-readmissions-reduction-program-hrrp\",\n          \"title\": \"Hospital Readmissions Reduction Program | CMS\"\n        },\n        {\n          \"url\": \"https://www.definitivehc.com/resources/healthcare-insights/hospital-readmission-rate-penalties\",\n          \"title\": \"Hospitals with the Highest Readmission Penalties in the U.S.\"\n        }\n      ],\n      \"findings\": \"The Hospital Readmissions Reduction Program is a Medicare value-based purchasing program that began in fiscal year 2013 to reduce payments to hospitals with excess readmissions. The program penalizes hospitals for excessive 30-day readmissions in six specific conditions: acute myocardial infarction chronic obstructive pulmonary disease heart failure pneumonia coronary artery bypass graft surgery and elective primary total hip or knee arthroplasty.\\n\\nPenalties are calculated based on a hospital's excess readmission ratio compared to national averages with payment reductions capped at 3 percent of Medicare fee-for-service base operating diagnosis-related group payments. Hospitals with readmission ratios of one or less receive no penalties while those with higher ratios face increasing penalty rates up to the maximum 3 percent reduction.\\n\\nThe program applies payment reductions to all Medicare fee-for-service payments during the fiscal year from October 1 to September 30. CMS sends confidential Hospital-Specific Reports annually and provides hospitals 30 days to review their data and request corrections before finalizing penalties.\\n\\nBeginning in fiscal year 2019 CMS implemented peer grouping methodology to assess hospital performance relative to other hospitals with similar proportions of dual-eligible Medicare and Medicaid beneficiaries. This change was mandated by the 21st Century Cures Act to maintain budget neutrality while accounting for socioeconomic factors affecting readmission rates.\"\n    }\n  }\n]",
+  "started_at": 1780328401.17582,
+  "completed_at": 1780328409.9024773,
+  "retries": 0
+}

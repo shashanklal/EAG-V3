@@ -1,0 +1,25 @@
+{
+  "node_id": "n:20",
+  "skill": "formatter",
+  "status": "complete",
+  "inputs": [
+    "n:18"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "formatter",
+    "output": {
+      "final_answer": "* Payment reductions capped at 3 percent.\n* Penalties apply to Medicare fee-for-service base operating DRG payments.\n* Approximately 2400 hospitals face penalties in FY2025.\n* About 7 percent of penalized hospitals face reductions of 1 percent or more."
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 7.773824691772461,
+    "provider": "llama4_mav",
+    "error": null
+  },
+  "prompt_sent": "You are the Formatter skill. You are the conventional TERMINAL node of\nevery DAG. Your job is to produce the final user-facing answer from\nwhatever upstream nodes have provided.\n\nYou make no tool calls. The user's original query appears under\nUSER_QUERY. Upstream results appear under INPUTS.\n\nProcedure:\n  1. Read USER_QUERY.\n  2. Read INPUTS and decide which fields / findings answer the query.\n  3. Write the user-facing answer in plain English. Adapt the format\n     (numbered list, comparison table, one paragraph) to what the\n     question actually asked.\n  4. When INPUTS contain a structured comparison (entities, dimensions,\n     rankings), render a FULL markdown comparison table with one column\n     per entity and one row per dimension, followed by the overall\n     ranking and recommendation. Do NOT collapse this into a single\n     paragraph — the user asked to compare, so show the comparison.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"final_answer\": \"<the answer the user sees>\"\n  }\n\nRules:\n  - This is the LAST node. Do not add successors.\n  - The answer must be answerable from INPUTS alone. If an upstream\n    node returned `(not found)` or marked itself failed, say so plainly\n    to the user rather than inventing.\n  - Cite sources only when an upstream node included them (Researcher\n    nodes do; Retriever nodes do). Do not invent URLs.\n\nUSER_QUERY: Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\n\nINPUTS:\n[\n  {\n    \"id\": \"n:18\",\n    \"kind\": \"upstream\",\n    \"skill\": \"summariser\",\n    \"output\": {\n      \"summary\": \"The CMS Hospital Readmissions Reduction Program (HRRP) penalizes hospitals with higher-than-expected 30-day unplanned readmission rates for six conditions including acute myocardial infarction and heart failure. Payment reductions are capped at 3 percent and apply to all Medicare fee-for-service base operating DRG payments for the full fiscal year. Since FY2019 hospitals are grouped into five peer groups based on dual Medicare-Medicaid eligibility share and compared against their peer group median rather than a universal benchmark. For FY2025 approximately 2400 hospitals face penalties with about 7 percent facing reductions of 1 percent or more.\",\n      \"preserved_facts\": [\n        \"Six covered conditions: acute myocardial infarction, heart failure, pneumonia, COPD, elective primary total hip/knee arthroplasty, and CABG surgery\",\n        \"Payment reductions capped at 3 percent\",\n        \"Penalties apply to all Medicare fee-for-service base operating DRG payments for the full fiscal year (October 1 \\u2013 September 30)\",\n        \"Since FY2019 hospitals are grouped into five peer groups based on proportion of dually eligible Medicare-Medicaid patients\",\n        \"Performance compared against peer group median rather than a universal benchmark\",\n        \"FY2025: approximately 2400 hospitals face some penalty\",\n        \"About 7 percent of penalized hospitals face reductions of 1 percent or more\",\n        \"71.6 percent of penalized hospitals receive penalties of less than 1 percent\",\n        \"FY2025 penalties based on claims data from July 2020 through June 2023 (three-year rolling period)\",\n        \"Hospitals receive confidential Hospital-Specific Reports and have 30 days to review and contest calculations\"\n      ]\n    }\n  }\n]",
+  "started_at": 1780328510.6102629,
+  "completed_at": 1780328518.3840876,
+  "retries": 0
+}

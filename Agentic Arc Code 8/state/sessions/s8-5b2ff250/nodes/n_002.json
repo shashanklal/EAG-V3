@@ -1,0 +1,36 @@
+{
+  "node_id": "n:2",
+  "skill": "researcher",
+  "status": "complete",
+  "inputs": [
+    "USER_QUERY"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "researcher",
+    "output": {
+      "question": "Research the CMS Hospital Readmissions Reduction Program penalties",
+      "sources": [
+        {
+          "url": "https://www.cms.gov/medicare/quality/value-based-programs/hospital-readmissions",
+          "title": "Hosp. Readmission Reduction | CMS"
+        },
+        {
+          "url": "https://legalclarity.org/hospital-readmissions-reduction-program-how-penalties-work/",
+          "title": "Hospital Readmissions Reduction Program: How Penalties Work"
+        }
+      ],
+      "findings": "The Hospital Readmissions Reduction Program is a Medicare value-based purchasing program established by the Affordable Care Act that began reducing payments to hospitals in fiscal year 2013. The program applies to general short-term acute care hospitals paid under Medicare's Inpatient Prospective Payment System and excludes critical access hospitals long-term care hospitals rehabilitation facilities psychiatric hospitals and children's hospitals.\n\nPenalties are calculated using an Excess Readmission Ratio (ERR) that compares a hospital's predicted readmission rate to the expected rate for similar patients at an average hospital. Hospitals with ERRs above 1.0 face payment reductions of up to 3% of their total Medicare base operating payments while those at or below 1.0 receive no penalty. The program tracks six specific conditions: acute myocardial infarction chronic obstructive pulmonary disease heart failure pneumonia coronary artery bypass graft surgery and elective primary total hip or knee replacement.\n\nFor fiscal year 2026 approximately 78% of eligible hospitals face some level of penalty with about 240 hospitals losing at least 1% of their Medicare payments. The performance period for FY 2026 penalties covers discharges from July 1 2021 through June 30 2024 representing a three-year data window. Beginning with FY 2027 CMS will shorten this measurement window to two years making recent performance carry more weight in penalty calculations.\n\nThe program includes risk adjustment for patient complexity and peer group stratification to account for hospitals serving different populations particularly safety-net hospitals with higher proportions of low-income patients. Planned readmissions are excluded from calculations using CMS's Planned Readmission Algorithm and the 30-day readmission window captures unplanned returns to any acute care hospital regardless of the principal diagnosis."
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 150.38049793243408,
+    "provider": "claude_s4",
+    "error": null
+  },
+  "prompt_sent": "You are the Researcher skill. You go to the web for a specific question\nand bring back normalised text the rest of the DAG can work from.\n\nYour tool surface is two MCP tools: `web_search(query, max_results)` and\n`fetch_url(url)`. Use them. Do not narrate; do not invent other tools.\n\nProcedure:\n  1. Read the QUESTION in the prompt.\n  2. Issue ONE `web_search` to get candidate URLs.\n  3. Pick the 1–3 most authoritative-looking URLs and fetch them with\n     `fetch_url` in sequence. Avoid clearly low-signal results (aggregator\n     spam, ad redirects).\n  4. Synthesise the relevant content from the fetched pages.\n\nTime budget: keep tool calls to 4 max per invocation. If a `fetch_url`\nreturns very little usable text, do not retry; move on.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"question\": \"<the question this run answered>\",\n    \"sources\": [{\"url\": \"<url>\", \"title\": \"<title>\"}, ...],\n    \"findings\": \"<2–6 short paragraphs of normalised text>\"\n  }\n\nYou do NOT produce the final user-facing answer. The downstream\ndistiller or formatter does that. If the question cannot be answered\nfrom the web within your budget, return `\"findings\": \"(not found)\"`\nand let the next node decide.\n\nUSER_QUERY: Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\n\nINPUTS:\n[\n  {\n    \"id\": \"USER_QUERY\",\n    \"kind\": \"query\",\n    \"value\": \"Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\"\n  }\n]",
+  "started_at": 1780328099.1345482,
+  "completed_at": 1780328249.5150461,
+  "retries": 0
+}

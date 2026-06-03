@@ -1,0 +1,40 @@
+{
+  "node_id": "n:3",
+  "skill": "researcher",
+  "status": "complete",
+  "inputs": [
+    "USER_QUERY"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "researcher",
+    "output": {
+      "question": "Find the populations of London, Paris, Berlin and tell me which two are closest in size.",
+      "sources": [
+        {
+          "url": "https://en.wikipedia.org/wiki/List_of_European_cities_by_population_within_city_limits",
+          "title": "List of European cities by population within city limits - Wikipedia"
+        },
+        {
+          "url": "https://www.worldatlas.com/cities/the-largest-cities-in-europe-by-population.html",
+          "title": "The Largest Cities In Europe By Population"
+        },
+        {
+          "url": "https://www.facebook.com/geography01/posts/-did-you-know-the-three-most-populous-countries-entirely-within-europe-are-germa/1257161343242213/",
+          "title": "The largest economy in Europe � High population density in industrial"
+        }
+      ],
+      "findings": "(not found)"
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 62.407018423080444,
+    "provider": "claude_s4",
+    "error": null
+  },
+  "prompt_sent": "You are the Researcher skill. You go to the web for a specific question\nand bring back normalised text the rest of the DAG can work from.\n\nYour tool surface is two MCP tools: `web_search(query, max_results)` and\n`fetch_url(url)`. Use them. Do not narrate; do not invent other tools.\n\nProcedure:\n  1. Read the QUESTION in the prompt.\n  2. Issue ONE `web_search` to get candidate URLs.\n  3. Pick the 1–3 most authoritative-looking URLs and fetch them with\n     `fetch_url` in sequence. Avoid clearly low-signal results (aggregator\n     spam, ad redirects).\n  4. Synthesise the relevant content from the fetched pages.\n\nTime budget: keep tool calls to 4 max per invocation. If a `fetch_url`\nreturns very little usable text, do not retry; move on.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"question\": \"<the question this run answered>\",\n    \"sources\": [{\"url\": \"<url>\", \"title\": \"<title>\"}, ...],\n    \"findings\": \"<2–6 short paragraphs of normalised text>\"\n  }\n\nYou do NOT produce the final user-facing answer. The downstream\ndistiller or formatter does that. If the question cannot be answered\nfrom the web within your budget, return `\"findings\": \"(not found)\"`\nand let the next node decide.\n\nUSER_QUERY: Find the populations of London, Paris, Berlin and tell me which two are closest in size.\n\nMEMORY HITS (5 from FAISS):\n  - [fact] Find populations of London, Paris, and Berlin and compare their sizes.\n      source: user_query\n  - [fact] Find populations of London, Paris, and Berlin and compare their sizes.\n      source: user_query\n  - [tool_outcome] Fetching information about Claude Shannon from Wikipedia, including birth date, death date, and three key contributions.\n      source: user_query\n  - [tool_outcome] Fetching information about Claude Shannon from Wikipedia, including birth date, death date, and three key contributions.\n      source: user_query\n  - [tool_outcome] Fetching information about Claude Shannon, including birth date, death date, and contributions to information theory from Wikipedia.\n      source: user_query\n\nINPUTS:\n[\n  {\n    \"id\": \"USER_QUERY\",\n    \"kind\": \"query\",\n    \"value\": \"Find the populations of London, Paris, Berlin and tell me which two are closest in size.\"\n  }\n]",
+  "started_at": 1780299289.7491794,
+  "completed_at": 1780299352.1561978,
+  "retries": 0
+}

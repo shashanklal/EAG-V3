@@ -1,0 +1,130 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "skill": "planner",
+      "inputs": [
+        "USER_QUERY"
+      ],
+      "metadata": {},
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "planner",
+        "output": {
+          "rationale": "Memory hits contain relevant data for all three conditions, so retrieve from indexed knowledge base and format the answer.",
+          "nodes": [
+            {
+              "skill": "retriever",
+              "inputs": [
+                "USER_QUERY"
+              ],
+              "metadata": {
+                "label": "retrieve_data",
+                "question": "Get hospitalization costs, readmission rates, and causes for heart failure, pneumonia, and hip replacement"
+              }
+            },
+            {
+              "skill": "formatter",
+              "inputs": [
+                "n:retrieve_data"
+              ],
+              "metadata": {
+                "label": "out"
+              }
+            }
+          ]
+        },
+        "artifacts": [],
+        "successors": [
+          {
+            "skill": "retriever",
+            "inputs": [
+              "USER_QUERY"
+            ],
+            "metadata": {
+              "label": "retrieve_data",
+              "question": "Get hospitalization costs, readmission rates, and causes for heart failure, pneumonia, and hip replacement"
+            }
+          },
+          {
+            "skill": "formatter",
+            "inputs": [
+              "n:retrieve_data"
+            ],
+            "metadata": {
+              "label": "out"
+            }
+          }
+        ],
+        "cost": 0.0,
+        "elapsed_s": 4.2717742919921875,
+        "provider": "claude_s4",
+        "error": null
+      },
+      "_result_typed": true,
+      "id": "n:1"
+    },
+    {
+      "skill": "retriever",
+      "inputs": [
+        "USER_QUERY"
+      ],
+      "metadata": {
+        "label": "retrieve_data",
+        "question": "Get hospitalization costs, readmission rates, and causes for heart failure, pneumonia, and hip replacement"
+      },
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "retriever",
+        "output": {
+          "found": false,
+          "chunks": [],
+          "summary": "No relevant information found to answer the question."
+        },
+        "artifacts": [],
+        "successors": [],
+        "cost": 0.0,
+        "elapsed_s": 27.592862844467163,
+        "provider": "llama31_8b",
+        "error": null
+      },
+      "_result_typed": true,
+      "id": "n:2"
+    },
+    {
+      "skill": "formatter",
+      "inputs": [
+        "n:2"
+      ],
+      "metadata": {
+        "label": "out"
+      },
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "formatter",
+        "output": {
+          "final_answer": "No relevant information was found to answer your question about the average hospitalization cost, top cause of readmission, and 30-day readmission rate for heart failure, pneumonia, and hip replacement surgery in US hospitals."
+        },
+        "artifacts": [],
+        "successors": [],
+        "cost": 0.0,
+        "elapsed_s": 4.156354188919067,
+        "provider": "llama4_mav",
+        "error": null
+      },
+      "_result_typed": true,
+      "id": "n:3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n:2",
+      "target": "n:3"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "node_id": "n:10",
+  "skill": "formatter",
+  "status": "complete",
+  "inputs": [
+    "n:8"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "formatter",
+    "output": {
+      "final_answer": "* The Researcher skill returned no findings.\n* The query was about CMS Hospital Readmissions Reduction Program penalties.\n* No factual content was available to summarize.\n* The result was marked as 'not found'."
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 7.214223861694336,
+    "provider": "llama4_mav",
+    "error": null
+  },
+  "prompt_sent": "You are the Formatter skill. You are the conventional TERMINAL node of\nevery DAG. Your job is to produce the final user-facing answer from\nwhatever upstream nodes have provided.\n\nYou make no tool calls. The user's original query appears under\nUSER_QUERY. Upstream results appear under INPUTS.\n\nProcedure:\n  1. Read USER_QUERY.\n  2. Read INPUTS and decide which fields / findings answer the query.\n  3. Write the user-facing answer in plain English. Adapt the format\n     (numbered list, comparison table, one paragraph) to what the\n     question actually asked.\n  4. When INPUTS contain a structured comparison (entities, dimensions,\n     rankings), render a FULL markdown comparison table with one column\n     per entity and one row per dimension, followed by the overall\n     ranking and recommendation. Do NOT collapse this into a single\n     paragraph — the user asked to compare, so show the comparison.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"final_answer\": \"<the answer the user sees>\"\n  }\n\nRules:\n  - This is the LAST node. Do not add successors.\n  - The answer must be answerable from INPUTS alone. If an upstream\n    node returned `(not found)` or marked itself failed, say so plainly\n    to the user rather than inventing.\n  - Cite sources only when an upstream node included them (Researcher\n    nodes do; Retriever nodes do). Do not invent URLs.\n\nUSER_QUERY: Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\n\nINPUTS:\n[\n  {\n    \"id\": \"n:8\",\n    \"kind\": \"upstream\",\n    \"skill\": \"summariser\",\n    \"output\": {\n      \"summary\": \"The upstream Researcher skill returned no findings for the query about CMS Hospital Readmissions Reduction Program penalties (result was 'not found' with zero sources). No factual content was available to summarize. A re-query or alternative source retrieval would be needed to produce accurate bullet points. Generating invented facts would risk misinformation and is therefore not done here.\",\n      \"preserved_facts\": [\n        \"Researcher skill returned 'not found' for the HRRP penalties query\",\n        \"Zero sources were provided in the upstream output\",\n        \"No load-bearing facts were available to extract or summarize\"\n      ]\n    }\n  }\n]",
+  "started_at": 1780328327.8315518,
+  "completed_at": 1780328335.0457757,
+  "retries": 0
+}

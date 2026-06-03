@@ -1,0 +1,37 @@
+{
+  "node_id": "n:18",
+  "skill": "summariser",
+  "status": "complete",
+  "inputs": [
+    "n:17"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "summariser",
+    "output": {
+      "summary": "The CMS Hospital Readmissions Reduction Program (HRRP) penalizes hospitals with higher-than-expected 30-day unplanned readmission rates for six conditions including acute myocardial infarction and heart failure. Payment reductions are capped at 3 percent and apply to all Medicare fee-for-service base operating DRG payments for the full fiscal year. Since FY2019 hospitals are grouped into five peer groups based on dual Medicare-Medicaid eligibility share and compared against their peer group median rather than a universal benchmark. For FY2025 approximately 2400 hospitals face penalties with about 7 percent facing reductions of 1 percent or more.",
+      "preserved_facts": [
+        "Six covered conditions: acute myocardial infarction, heart failure, pneumonia, COPD, elective primary total hip/knee arthroplasty, and CABG surgery",
+        "Payment reductions capped at 3 percent",
+        "Penalties apply to all Medicare fee-for-service base operating DRG payments for the full fiscal year (October 1 – September 30)",
+        "Since FY2019 hospitals are grouped into five peer groups based on proportion of dually eligible Medicare-Medicaid patients",
+        "Performance compared against peer group median rather than a universal benchmark",
+        "FY2025: approximately 2400 hospitals face some penalty",
+        "About 7 percent of penalized hospitals face reductions of 1 percent or more",
+        "71.6 percent of penalized hospitals receive penalties of less than 1 percent",
+        "FY2025 penalties based on claims data from July 2020 through June 2023 (three-year rolling period)",
+        "Hospitals receive confidential Hospital-Specific Reports and have 30 days to review and contest calculations"
+      ]
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 8.80623197555542,
+    "provider": "claude_s46",
+    "error": null
+  },
+  "prompt_sent": "You are the Summariser skill. You take a long input and produce a short\nform that preserves the load-bearing content.\n\nYou make no tool calls. The input arrives in the prompt under INPUTS.\n\nProcedure:\n  1. Read the input.\n  2. Identify the load-bearing claims (the facts, dates, names, numbers\n     a downstream reader would have to know).\n  3. Emit a short summary that preserves them. Aim for 4–8 sentences for\n     a paper-length input; one paragraph for a single-page input.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"summary\": \"<the short summary>\",\n    \"preserved_facts\": [\"<fact 1>\", \"<fact 2>\", ...]\n  }\n\n`preserved_facts` is a short bullet list of the specific items you kept,\nso a downstream Critic can check none were dropped silently.\n\nUSER_QUERY: Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\n\nINPUTS:\n[\n  {\n    \"id\": \"n:17\",\n    \"kind\": \"upstream\",\n    \"skill\": \"researcher\",\n    \"output\": {\n      \"question\": \"Research the CMS Hospital Readmissions Reduction Program penalties. Summarize in exactly 4 bullets. Each bullet must be a single sentence containing NO commas. The critic must verify zero commas appear in any bullet.\",\n      \"sources\": [\n        {\n          \"url\": \"https://www.cms.gov/medicare/payment/prospective-payment-systems/acute-inpatient-pps/hospital-readmissions-reduction-program-hrrp\",\n          \"title\": \"Hospital Readmissions Reduction Program | CMS\"\n        },\n        {\n          \"url\": \"https://legalclarity.org/cms-readmission-rates-calculation-and-penalties/\",\n          \"title\": \"CMS Readmission Rates: How They're Calculated and Penalized\"\n        },\n        {\n          \"url\": \"https://www.advisory.com/daily-briefing/2024/09/24/readmisson-penalties\",\n          \"title\": \"Charted: Hospital readmission penalties for 2025\"\n        }\n      ],\n      \"findings\": \"The Hospital Readmissions Reduction Program is a Medicare value-based purchasing program that reduces payments to hospitals with higher-than-expected 30-day unplanned readmission rates for six specific conditions: acute myocardial infarction heart failure pneumonia chronic obstructive pulmonary disease elective primary total hip/knee arthroplasty and coronary artery bypass graft surgery. Payment reductions are capped at 3 percent and apply to all Medicare fee-for-service base operating diagnosis-related group payments during the entire fiscal year from October 1 to September 30.\\n\\nCMS calculates penalties using the Excess Readmission Ratio which compares each hospital's risk-adjusted actual readmissions to expected readmissions based on patient characteristics like age sex and clinical conditions. Since fiscal year 2019 hospitals are grouped into five peer groups based on the proportion of patients who are dually eligible for Medicare and Medicaid with each hospital's performance compared against the median of its peer group rather than a universal benchmark.\\n\\nFor fiscal year 2025 approximately 2400 hospitals face some level of penalty with about 7 percent facing reductions of 1 percent or more and 71.6 percent receiving penalties of less than 1 percent. The program uses a three-year rolling performance period to calculate penalties with fiscal year 2025 penalties based on claims data from July 2020 through June 2023.\\n\\nHospitals receive confidential Hospital-Specific Reports annually and have 30 days to review their data submit questions about calculations and request corrections before CMS finalizes the penalty determinations. The program maintains budget neutrality through a neutrality modifier that ensures total Medicare savings under the peer group system match what the previous non-stratified method would have produced.\"\n    }\n  }\n]",
+  "started_at": 1780328501.7806494,
+  "completed_at": 1780328510.5868814,
+  "retries": 0
+}
