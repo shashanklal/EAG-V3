@@ -1,0 +1,32 @@
+{
+  "node_id": "n:3",
+  "skill": "browser",
+  "status": "failed",
+  "inputs": [
+    "n:2"
+  ],
+  "result": {
+    "success": false,
+    "agent_name": "browser",
+    "output": {
+      "url": "https://360digitmg.com/india/generative-ai-certification-course-training-institute",
+      "goal": "extract course fees, duration, ratings, feedback, enrollment dates, and registration deadlines from this course page",
+      "path": "extract",
+      "turns": 0,
+      "content": null,
+      "actions": [],
+      "final_url": null
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 5.289257049560547,
+    "provider": "",
+    "error": "gateway_blocked: recaptcha marker on https://360digitmg.com/india/generative-ai-certification-course-training-institute",
+    "error_code": "gateway_blocked"
+  },
+  "prompt_sent": "The Browser skill fetches and interacts with web pages. It walks a\nfour-layer cascade starting from the cheapest path (HTML extraction)\nand escalating only when needed (deterministic selectors, accessibility\ntree, then visual set-of-marks with a vision model). The escalation\nis internal; you pass `url` and `goal`, the skill chooses the layer.\n\nInputs: `metadata.url` (required), `metadata.goal` (required, free-text\ndescription of what to extract or do). Output: `BrowserOutput` with\n`content` (for extraction goals) or `actions` plus `final_url` (for\ninteraction goals), and `path` reporting the cascade layer that\nactually ran. When the page is gated by CAPTCHA or login, the skill\nreturns `error_code=\"gateway_blocked\"` and no content; the Planner\nshould route around by trying a different source URL or by handing\nback to the user.\n\nINPUTS:\n[\n  {\n    \"id\": \"n:2\",\n    \"kind\": \"upstream\",\n    \"skill\": \"researcher\",\n    \"output\": {\n      \"question\": \"Find 3 online AI courses for working professionals under 1,00,000 Indian Rupees with their detail page URLs, focusing on courses available for registration in next 3 months\",\n      \"sources\": [\n        {\n          \"url\": \"https://360digitmg.com/india/generative-ai-certification-course-training-institute\",\n          \"title\": \"Generative AI Course in India \\u2013 360DigiTMG\"\n        },\n        {\n          \"url\": \"https://www.edureka.co/masters-program/generative-ai-prompt-engineering-training\",\n          \"title\": \"Generative AI Masters Program Online - Edureka\"\n        },\n        {\n          \"url\": \"https://www.softlogicsys.in/artificial-intelligence-online-training/\",\n          \"title\": \"Artificial Intelligence Online Course With 100% Job - Softlogic Systems\"\n        }\n      ],\n      \"findings\": \"Three online AI courses for working professionals under \\u20b91,00,000 were identified. 360DigiTMG offers a Generative AI Certification Course priced at \\u20b980,000 (discounted from \\u20b91,10,000) with 60 hours of intensive classroom and online sessions plus 20 hours of free Python programming videos. The course includes job assistance and is taught by trainers from ISB, IIT & IIM. It covers generative AI fundamentals, neural networks, large language models, and practical applications across various domains.\\n\\nEdureka's Generative AI Masters Program is priced at \\u20b989,900 (discounted from \\u20b92,11,400) and includes 8 industry-focused courses totaling 150+ hours of learning. The program covers Data Science with Python, Artificial Intelligence, LLM Prompt Engineering, Agentic AI for Developers, and Generative AI for Business Transformation. It offers blended learning with live instructor-led and self-paced courses, hands-on projects, and lifetime certification validity.\\n\\nSoftlogic Systems provides an Artificial Intelligence Online Course with 1.5 months duration and 100% placement assurance. The course fee details were not explicitly mentioned but appears to be within budget range. It covers machine learning, deep learning, natural language processing, computer vision, neural networks, and AI model deployment. The program includes 3-5 real-time projects, 60-100 practical assignments, and offers both weekday and weekend batches for working professionals.\\n\\nAll three courses are currently accepting registrations and offer flexible scheduling suitable for working professionals. They provide comprehensive AI training with practical projects, industry-relevant curriculum, and career support services.\"\n    }\n  }\n]",
+  "started_at": 1780934026.7599502,
+  "completed_at": 1780934032.0492072,
+  "retries": 0
+}

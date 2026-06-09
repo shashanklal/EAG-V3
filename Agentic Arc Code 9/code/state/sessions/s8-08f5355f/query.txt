@@ -1,0 +1,1 @@
+Compare 3 'Online AI Courses for working professionals' under 1,00,000 Indian Rupees. For each course, extract the fees,duration, ratings or feedbacks if any, duration. Rate top 3 based on value for money and which can be registered in next 3 months from current month. Present findings in a comparison table.

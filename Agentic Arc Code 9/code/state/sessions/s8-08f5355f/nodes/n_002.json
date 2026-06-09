@@ -1,0 +1,41 @@
+{
+  "node_id": "n:2",
+  "skill": "researcher",
+  "status": "complete",
+  "inputs": [
+    "USER_QUERY"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "researcher",
+    "output": {
+      "question": "Find 3 online AI courses for working professionals under 1,00,000 Indian Rupees with their detail page URLs, focusing on courses available for registration in next 3 months",
+      "sources": [
+        {
+          "url": "https://360digitmg.com/india/generative-ai-certification-course-training-institute",
+          "title": "Generative AI Course in India – 360DigiTMG"
+        },
+        {
+          "url": "https://www.edureka.co/masters-program/generative-ai-prompt-engineering-training",
+          "title": "Generative AI Masters Program Online - Edureka"
+        },
+        {
+          "url": "https://www.softlogicsys.in/artificial-intelligence-online-training/",
+          "title": "Artificial Intelligence Online Course With 100% Job - Softlogic Systems"
+        }
+      ],
+      "findings": "Three online AI courses for working professionals under ₹1,00,000 were identified. 360DigiTMG offers a Generative AI Certification Course priced at ₹80,000 (discounted from ₹1,10,000) with 60 hours of intensive classroom and online sessions plus 20 hours of free Python programming videos. The course includes job assistance and is taught by trainers from ISB, IIT & IIM. It covers generative AI fundamentals, neural networks, large language models, and practical applications across various domains.\n\nEdureka's Generative AI Masters Program is priced at ₹89,900 (discounted from ₹2,11,400) and includes 8 industry-focused courses totaling 150+ hours of learning. The program covers Data Science with Python, Artificial Intelligence, LLM Prompt Engineering, Agentic AI for Developers, and Generative AI for Business Transformation. It offers blended learning with live instructor-led and self-paced courses, hands-on projects, and lifetime certification validity.\n\nSoftlogic Systems provides an Artificial Intelligence Online Course with 1.5 months duration and 100% placement assurance. The course fee details were not explicitly mentioned but appears to be within budget range. It covers machine learning, deep learning, natural language processing, computer vision, neural networks, and AI model deployment. The program includes 3-5 real-time projects, 60-100 practical assignments, and offers both weekday and weekend batches for working professionals.\n\nAll three courses are currently accepting registrations and offer flexible scheduling suitable for working professionals. They provide comprehensive AI training with practical projects, industry-relevant curriculum, and career support services."
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 239.1986129283905,
+    "provider": "claude_s4",
+    "error": null,
+    "error_code": null
+  },
+  "prompt_sent": "You are the Researcher skill. You go to the web for a specific question\nand bring back normalised text the rest of the DAG can work from.\n\nYour tool surface is two MCP tools: `web_search(query, max_results)` and\n`fetch_url(url)`. Use them. Do not narrate; do not invent other tools.\n\nProcedure:\n  1. Read the QUESTION in the prompt.\n  2. Issue ONE `web_search` to get candidate URLs (use max_results=10\n     to get enough candidates).\n  3. Pick 3 authoritative-looking URLs and fetch them with `fetch_url`\n     in sequence. Avoid clearly low-signal results (aggregator spam,\n     ad redirects). When the question asks to \"compare N items\" or\n     \"find top N\", you MUST return at least N distinct source URLs —\n     one per item — so downstream browser nodes can visit each.\n  4. Synthesise the relevant content from the fetched pages.\n\nCRITICAL: Every URL you fetch MUST appear in your `sources` array.\nThe `sources` array is how downstream nodes discover URLs to visit.\nIf you fetch 3 URLs, list all 3 in `sources`. Do NOT omit URLs you\nfetched — even if the content was thin.\n\nTime budget: keep tool calls to 5 max per invocation. If a `fetch_url`\nreturns very little usable text, still include the URL in sources and\nmove on.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"question\": \"<the question this run answered>\",\n    \"sources\": [{\"url\": \"<url>\", \"title\": \"<title>\"}, ...],\n    \"findings\": \"<2–6 short paragraphs of normalised text>\"\n  }\n\nYou do NOT produce the final user-facing answer. The downstream\ndistiller or formatter does that. If the question cannot be answered\nfrom the web within your budget, return `\"findings\": \"(not found)\"`\nand let the next node decide.\n\nUSER_QUERY: Compare 3 'Online AI Courses for working professionals' under 1,00,000 Indian Rupees. For each course, extract the fees,duration, ratings or feedbacks if any, duration. Rate top 3 based on value for money and which can be registered in next 3 months from current month. Present findings in a comparison table.\n\nQUESTION: Find 3 online AI courses for working professionals under 1,00,000 Indian Rupees with their detail page URLs, focusing on courses available for registration in next 3 months\n\nINPUTS:\n[\n  {\n    \"id\": \"USER_QUERY\",\n    \"kind\": \"query\",\n    \"value\": \"Compare 3 'Online AI Courses for working professionals' under 1,00,000 Indian Rupees. For each course, extract the fees,duration, ratings or feedbacks if any, duration. Rate top 3 based on value for money and which can be registered in next 3 months from current month. Present findings in a comparison table.\"\n  }\n]",
+  "started_at": 1780933786.5060287,
+  "completed_at": 1780934025.7046416,
+  "retries": 0
+}

@@ -1,0 +1,51 @@
+[1]<a>Books to Scrape</a>
+[2]<a>Home</a>
+[3]<a>Books</a>
+[4]<a>Travel</a>
+[5]<a>Mystery</a>
+[6]<a>Historical Fiction</a>
+[7]<a>Sequential Art</a>
+[8]<a>Classics</a>
+[9]<a>Philosophy</a>
+[10]<a>Romance</a>
+[11]<a>Womens Fiction</a>
+[12]<a>Fiction</a>
+[13]<a>Childrens</a>
+[14]<a>Religion</a>
+[15]<a>Nonfiction</a>
+[16]<a>Music</a>
+[17]<a>Default</a>
+[18]<a>Science Fiction</a>
+[19]<a>Sports and Games</a>
+[20]<a>Add a comment</a>
+[21]<a>Fantasy</a>
+[22]<a>New Adult</a>
+[23]<a>Young Adult</a>
+[24]<a>Science</a>
+[25]<a>Poetry</a>
+[26]<a>Paranormal</a>
+[27]<a>Art</a>
+[28]<a>Psychology</a>
+[29]<a>Autobiography</a>
+[30]<a>Parenting</a>
+[31]<a>Adult Fiction</a>
+[32]<a>Humor</a>
+[33]<a>Horror</a>
+[34]<a>History</a>
+[35]<a>Food and Drink</a>
+[36]<a> [rating:Three] [price:£51.77] [avail:In stock]</a>
+[37]<a>A Light in the ... [rating:Three] [price:£51.77] [avail:In stock]</a>
+[38]<button>Add to basket [price:£51.77] [avail:In stock]</button>
+[39]<a> [rating:One] [price:£53.74] [avail:In stock]</a>
+[40]<a>Tipping the Velvet [rating:One] [price:£53.74] [avail:In stock]</a>
+[41]<button>Add to basket [price:£53.74] [avail:In stock]</button>
+[42]<a> [rating:One] [price:£50.10] [avail:In stock]</a>
+[43]<a>Soumission [rating:One] [price:£50.10] [avail:In stock]</a>
+[44]<button>Add to basket [price:£50.10] [avail:In stock]</button>
+[45]<a> [rating:Four] [price:£47.82] [avail:In stock]</a>
+[46]<a>Sharp Objects [rating:Four] [price:£47.82] [avail:In stock]</a>
+[47]<button>Add to basket [price:£47.82] [avail:In stock]</button>
+[48]<a> [rating:Five] [price:£54.23] [avail:In stock]</a>
+[49]<a> [rating:One] [price:£22.65] [avail:In stock]</a>
+[50]<a> [rating:Four] [price:£33.34] [avail:In stock]</a>
+[51]<a> [rating:Three] [price:£17.93] [avail:In stock]</a>

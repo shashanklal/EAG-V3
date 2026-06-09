@@ -1,0 +1,32 @@
+{
+  "node_id": "n:12",
+  "skill": "browser",
+  "status": "failed",
+  "inputs": [
+    "n:11"
+  ],
+  "result": {
+    "success": false,
+    "agent_name": "browser",
+    "output": {
+      "url": "https://pwskills.com/data-science-and-analytics/data-science-with-generative-ai-course-245535/",
+      "goal": "extract exact course fees, duration, ratings/reviews, enrollment dates, and registration deadlines from this AI course page",
+      "path": "extract",
+      "turns": 0,
+      "content": null,
+      "actions": [],
+      "final_url": null
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 13.864341974258423,
+    "provider": "",
+    "error": "gateway_blocked (recaptcha) detected after JS render at https://pwskills.com/data-science-and-analytics/data-science-with-generative-ai-course-245535/",
+    "error_code": "gateway_blocked"
+  },
+  "prompt_sent": "The Browser skill fetches and interacts with web pages. It walks a\nfour-layer cascade starting from the cheapest path (HTML extraction)\nand escalating only when needed (deterministic selectors, accessibility\ntree, then visual set-of-marks with a vision model). The escalation\nis internal; you pass `url` and `goal`, the skill chooses the layer.\n\nInputs: `metadata.url` (required), `metadata.goal` (required, free-text\ndescription of what to extract or do). Output: `BrowserOutput` with\n`content` (for extraction goals) or `actions` plus `final_url` (for\ninteraction goals), and `path` reporting the cascade layer that\nactually ran. When the page is gated by CAPTCHA or login, the skill\nreturns `error_code=\"gateway_blocked\"` and no content; the Planner\nshould route around by trying a different source URL or by handing\nback to the user.\n\nINPUTS:\n[\n  {\n    \"id\": \"n:11\",\n    \"kind\": \"upstream\",\n    \"skill\": \"researcher\",\n    \"output\": {\n      \"question\": \"Find one additional online AI course for working professionals under 1,00,000 Indian Rupees with registration available in next 3 months, excluding 360DigiTMG\",\n      \"sources\": [\n        {\n          \"url\": \"https://pwskills.com/data-science-and-analytics/data-science-with-generative-ai-course-245535/\",\n          \"title\": \"Data Science Course - PW Skills\"\n        },\n        {\n          \"url\": \"https://www.simplilearn.com/\",\n          \"title\": \"Simplilearn | Online Courses - Bootcamp & Certification Platform\"\n        }\n      ],\n      \"findings\": \"Simplilearn offers several AI courses suitable for working professionals within the budget range. The Professional Certificate Program in Generative AI Machine Learning and Intelligent Automation is an 11-month program with cohorts starting June 10, 2026, which falls within the next 3 months timeframe. They also offer an Advanced Executive Program In Applied Generative AI with a 4-month duration starting June 10, 2026. Additionally, there's a Professional Certificate Course in AI-Powered Data Analytics (7 months) starting June 15, 2026, and a Microsoft Applied Agentic AI: Systems Design & Impact program (10 weeks) starting June 11, 2026. PW Skills offers a Data Science With Generative AI Course at \\u20b96,999, which is significantly under the budget limit, though specific registration dates were not accessible from their website content. Simplilearn's programs are co-created with leading universities and companies, feature live instruction by industry experts, hands-on projects, and dedicated career guidance with resume and interview preparation.\"\n    }\n  }\n]",
+  "started_at": 1780934106.4720442,
+  "completed_at": 1780934120.3363862,
+  "retries": 0
+}

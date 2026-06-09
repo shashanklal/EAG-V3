@@ -1,0 +1,31 @@
+{
+  "node_id": "n:16",
+  "skill": "researcher",
+  "status": "complete",
+  "inputs": [],
+  "result": {
+    "success": true,
+    "agent_name": "researcher",
+    "output": {
+      "question": "Find one alternative online AI course for working professionals under 1,00,000 Indian Rupees (not PWSkills, 360DigiTMG, Edureka, or Softlogic) with course page URL, focusing on courses available for registration in next 3 months",
+      "sources": [
+        {
+          "url": "https://www.scaler.com/topics/best-ai-courses-in-india/",
+          "title": "Best AI Courses Online with Certificates in India - Scaler"
+        }
+      ],
+      "findings": "Scaler offers an AI & ML Course with IIT-Roorkee certification that meets the criteria for working professionals. The course is priced at ₹40,000, well under the 1,00,000 rupee budget. It is delivered in collaboration with IIT-Roorkee CEC and runs for approximately 12 months with live online classes and structured assignments. The program includes 1:1 mentorship with ML engineers from top product companies, specializations in NLP, Computer Vision, and Generative AI, and comprehensive career support including mock interviews, placement drives, and referrals. The course features practically applicable projects such as plagiarism detection, sign language translators, and AI-based tutors. It provides joint certification from Scaler and IIT-M Pravartak, making it credible for career advancement. The program is specifically designed for working professionals and includes access to Scaler's peer-learning community. Based on the information available, this course appears to be actively enrolling and suitable for registration within the next 3 months."
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 139.27698707580566,
+    "provider": "claude_s4",
+    "error": null,
+    "error_code": null
+  },
+  "prompt_sent": "You are the Researcher skill. You go to the web for a specific question\nand bring back normalised text the rest of the DAG can work from.\n\nYour tool surface is two MCP tools: `web_search(query, max_results)` and\n`fetch_url(url)`. Use them. Do not narrate; do not invent other tools.\n\nProcedure:\n  1. Read the QUESTION in the prompt.\n  2. Issue ONE `web_search` to get candidate URLs (use max_results=10\n     to get enough candidates).\n  3. Pick 3 authoritative-looking URLs and fetch them with `fetch_url`\n     in sequence. Avoid clearly low-signal results (aggregator spam,\n     ad redirects). When the question asks to \"compare N items\" or\n     \"find top N\", you MUST return at least N distinct source URLs —\n     one per item — so downstream browser nodes can visit each.\n  4. Synthesise the relevant content from the fetched pages.\n\nCRITICAL: Every URL you fetch MUST appear in your `sources` array.\nThe `sources` array is how downstream nodes discover URLs to visit.\nIf you fetch 3 URLs, list all 3 in `sources`. Do NOT omit URLs you\nfetched — even if the content was thin.\n\nTime budget: keep tool calls to 5 max per invocation. If a `fetch_url`\nreturns very little usable text, still include the URL in sources and\nmove on.\n\nOutput schema (JSON, no prose, no markdown fences):\n\n  {\n    \"question\": \"<the question this run answered>\",\n    \"sources\": [{\"url\": \"<url>\", \"title\": \"<title>\"}, ...],\n    \"findings\": \"<2–6 short paragraphs of normalised text>\"\n  }\n\nYou do NOT produce the final user-facing answer. The downstream\ndistiller or formatter does that. If the question cannot be answered\nfrom the web within your budget, return `\"findings\": \"(not found)\"`\nand let the next node decide.\n\nQUESTION: Find one alternative online AI course for working professionals under 1,00,000 Indian Rupees (not PWSkills, 360DigiTMG, Edureka, or Softlogic) with course page URL, focusing on courses available for registration in next 3 months\n\nINPUTS:\n[]",
+  "started_at": 1780934129.6913521,
+  "completed_at": 1780934268.9683392,
+  "retries": 0
+}

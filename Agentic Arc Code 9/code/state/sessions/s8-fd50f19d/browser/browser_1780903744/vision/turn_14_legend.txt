@@ -1,0 +1,52 @@
+[1]<a>Books to Scrape</a>
+[2]<a>Home</a>
+[3]<a>Books</a>
+[4]<a>Books</a>
+[5]<a>Travel</a>
+[6]<a>Mystery</a>
+[7]<a>Historical Fiction</a>
+[8]<a>Sequential Art</a>
+[9]<a>Classics</a>
+[10]<a>Philosophy</a>
+[11]<a>Romance</a>
+[12]<a>Womens Fiction</a>
+[13]<a>Fiction</a>
+[14]<a>Childrens</a>
+[15]<a>Religion</a>
+[16]<a>Nonfiction</a>
+[17]<a>Music</a>
+[18]<a>Default</a>
+[19]<a>Science Fiction</a>
+[20]<a>Sports and Games</a>
+[21]<a>Add a comment</a>
+[22]<a>Fantasy</a>
+[23]<a>New Adult</a>
+[24]<a>Young Adult</a>
+[25]<a>Science</a>
+[26]<a>Poetry</a>
+[27]<a>Paranormal</a>
+[28]<a>Art</a>
+[29]<a>Psychology</a>
+[30]<a>Autobiography</a>
+[31]<a>Parenting</a>
+[32]<a>Adult Fiction</a>
+[33]<a>Humor</a>
+[34]<a>Horror</a>
+[35]<a>History</a>
+[36]<a>Food and Drink</a>
+[37]<a> [rating:Five] [price:£54.23] [avail:In stock]</a>
+[38]<a>Sapiens: A Brief History ... [rating:Five] [price:£54.23] [avail:In stock]</a>
+[39]<button>Add to basket [price:£54.23] [avail:In stock]</button>
+[40]<a> [rating:One] [price:£25.52] [avail:In stock]</a>
+[41]<a>Unbound: How Eight Technologies ... [rating:One] [price:£25.52] [avail:In stock]</a>
+[42]<button>Add to basket [price:£25.52] [avail:In stock]</button>
+[43]<a> [rating:One] [price:£19.73] [avail:In stock]</a>
+[44]<a>The Age of Genius: ... [rating:One] [price:£19.73] [avail:In stock]</a>
+[45]<button>Add to basket [price:£19.73] [avail:In stock]</button>
+[46]<a> [rating:Two] [price:£36.28] [avail:In stock]</a>
+[47]<a>Political Suicide: Missteps, Peccadilloes, ... [rating:Two] [price:£36.28] [avail:In stock]</a>
+[48]<button>Add to basket [price:£36.28] [avail:In stock]</button>
+[49]<a> [rating:One] [price:£59.64] [avail:In stock]</a>
+[50]<a> [rating:Three] [price:£24.70] [avail:In stock]</a>
+[51]<a> [rating:Three] [price:£14.58] [avail:In stock]</a>
+[52]<a> [rating:Three] [price:£21.80] [avail:In stock]</a>
