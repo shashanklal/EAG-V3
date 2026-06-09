@@ -1,0 +1,85 @@
+
+══════════════════════════════════════════════════════════════════════════════
+session s8-d63b907c  ─  query: Compare 3 'Online AI Courses for working professionals' under 1,00,000 Indian Rupees. For each course, extract the fees,duration, ratings or feedbacks if any, duration. Rate top 3 based on value for money and which can be registered in next 3 months from current month. Present findings in a comparison table.
+══════════════════════════════════════════════════════════════════════════════
+[n:1] planner            complete (8.2s)
+[n:2] researcher         complete (123.1s)
+[n:3] browser            complete (0.9s)
+       browser: path=extract  turns=0  url=https://www.edureka.co/masters-program/generative-ai-prompt-engineering-training
+[n:4] browser            failed   (0.0s)  err=exception: ValueError: url_from_input: no URL at index 1 in upstream output
+  ↪ n:4 failed (validation_error, skill=browser): validation error (malformed NodeSpec); fix the prompt, not the run
+[n:5] browser            failed   (0.0s)  err=exception: ValueError: url_from_input: no URL at index 2 in upstream output
+  ↪ n:5 failed (validation_error, skill=browser): validation error (malformed NodeSpec); fix the prompt, not the run
+[n:6] distiller          complete (15.1s)
+[n:8] critic             complete (3.0s)
+[n:7] formatter          complete (11.1s)
+
+──────────────────────────────────────────────────────────────────────────────
+node   skill                 start (rel)    elapsed  finish (rel)
+n:1    planner                   0.02 s    8.23 s       8.25 s
+n:2    researcher                8.27 s  123.06 s     131.33 s
+n:3    browser                 132.06 s    0.92 s     132.98 s
+n:4    browser                 132.98 s    0.00 s     132.98 s
+n:5    browser                 132.99 s    0.00 s     132.99 s
+n:6    distiller               133.01 s   15.13 s     148.14 s
+n:8    critic                  148.17 s    3.04 s     151.21 s
+n:7    formatter               151.23 s   11.09 s     162.32 s
+
+wall-clock end-to-end:             162.32 s
+sum-of-elapsed (serial):           161.47 s
+parallel speedup ratio:            0.99x
+──────────────────────────────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────────────────────────────
+BROWSER SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+
+  [n:3] status=complete  path=extract  turns=0  url=https://www.edureka.co/masters-program/generative-ai-prompt-engineering-training
+         goal: extract course fees, duration, ratings, feedback, enrollment dates, and registration deadlines from this course page
+         extracted data (15468 chars):
+           New Course Enquiry :[+1 833 429 8868](tel:+1 833 429 8868) (Toll Free) ↵ - [Home](/) ↵ - [All courses](/all-courses) ↵ - [Artificial Intelligence](https://www.edureka.co/artificial-intelligence-certification-courses) ↵ - Generative AI Masters Program Online ↵ Masters Program ↵ 46466 Learners ↵ Build practical Generative AI and Agentic AI skills to future-proof your career. ↵ Edureka’s Generative AI Masters Program is a comprehensive training program designed to help you build practical expertise in Generative A
+           ... (14968 more chars)
+
+  [n:4] status=skipped  path=n/a  turns=0  url=n/a
+         error: exception: ValueError: url_from_input: no URL at index 1 in upstream output
+
+  [n:5] status=skipped  path=n/a  turns=0  url=n/a
+         error: exception: ValueError: url_from_input: no URL at index 2 in upstream output
+
+──────────────────────────────────────────────────────────────────────────────
+TURN COUNT & COST SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+  skill                 nodes   cost ($)
+  ──────────────────────────────────────
+  browser                   3          —
+  critic                    1          —
+  distiller                 1          —
+  formatter                 1          —
+  planner                   1          —
+  researcher                1          —
+  ──────────────────────────────────────
+  TOTAL                     8          —
+
+  total browser turns: 0
+  total nodes executed: 8
+──────────────────────────────────────────────────────────────────────────────
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: ## Comparison of Online AI Courses for Working Professionals
+
+Unfortunately, we could only find detailed information for one course that fits your criteria. Here's a comparison table based on the available data:
+
+| Field            | Generative AI Masters Program (Online) | Course 2 | Course 3 |
+| ----------------- | ----------------------------------------- | -------- | -------- |
+| Course Name      | Generative AI Masters Program (Online) | N/A      | N/A      |
+| Provider         | Edureka                                 | N/A      | N/A      |
+| Fees in INR      | ₹899                                   | N/A      | N/A      |
+| Duration         | 4–6 months (150+ hours)                 | N/A      | N/A      |
+| Ratings          | 4.5 (Google), 4.6 (G2), 4.7 (SiteJabber) | N/A      | N/A      |
+| Feedback Summary | Positive                                | N/A      | N/A      |
+| Registration     | Not explicitly stated                  | N/A      | N/A      |
+
+### Rating Top 3 Courses Based on Value for Money
+We were unable to rate the top 3 courses as we could only find detailed information for one course. The Generative AI Masters Program by Edureka is priced at ₹899 and has positive reviews, but without more data, a comprehensive comparison isn't possible.
+══════════════════════════════════════════════════════════════════════════════
+

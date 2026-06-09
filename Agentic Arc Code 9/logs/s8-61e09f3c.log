@@ -1,0 +1,165 @@
+
+══════════════════════════════════════════════════════════════════════════════
+session s8-61e09f3c  ─  query: Compare 3 'Online AI Courses for working professionals' under 1,00,000 Indian Rupees. For each course, extract the fees,duration, ratings or feedbacks if any, duration. Rate top 3 based on value for money and which can be registered in next 3 months from current month. Present findings in a comparison table.
+══════════════════════════════════════════════════════════════════════════════
+[n:1] planner            complete (10.2s)
+[n:2] researcher         complete (134.3s)
+[n:3] browser            complete (1.1s)
+       browser: path=extract  turns=0  url=https://www.scaler.com/topics/best-ai-courses-in-india/
+[n:4] browser            failed   (15.2s)  err=gateway_blocked (recaptcha) detected after JS render at https://pwskills.com/dat
+       browser: path=extract  turns=0  url=https://pwskills.com/data-science-and-analytics/data-science-with-generative-ai-
+  ↪ recovery (upstream_failure): planner node n:8 queued for n:4; reusing 2 prior result(s): n:2, n:3
+[n:5] browser            complete (3.1s)
+       browser: path=extract  turns=0  url=https://intellipaat.com/artificial-intelligence-certification/
+[n:8] planner            complete (9.1s)
+[n:9] browser            complete (1.0s)
+       browser: path=extract  turns=0  url=https://intellipaat.com/artificial-intelligence-certification/
+[n:10] researcher         complete (253.1s)
+[n:11] distiller          complete (19.6s)
+[n:13] critic             complete (3.5s)
+  ↪ critic-fail recovery: planner node n:14 for n:11
+[n:14] planner            complete (8.1s)
+[n:15] researcher         failed   (0.0s)  err=exception: ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  ↪ recovery (upstream_failure): planner node n:21 queued for n:15; reusing 6 prior result(s): n:2, n:3, n:5, n:9, n:10, n:11
+[n:21] planner            complete (8.3s)
+[n:22] browser            failed   (14.4s)  err=gateway_blocked (recaptcha) detected after JS render at https://pwskills.com/dat
+       browser: path=extract  turns=0  url=https://pwskills.com/data-science-and-analytics/data-science-with-generative-ai-
+  ↪ recovery (upstream_failure): planner node n:26 queued for n:22; reusing 6 prior result(s): n:2, n:3, n:5, n:9, n:10, n:11
+[n:23] browser            complete (1.5s)
+       browser: path=extract  turns=0  url=https://intellipaat.com/artificial-intelligence-certification/
+[n:26] planner            complete (7.8s)
+[n:27] browser            complete (1.5s)
+       browser: path=extract  turns=0  url=https://intellipaat.com/artificial-intelligence-certification/
+[n:28] distiller          complete (21.9s)
+[n:30] critic             complete (3.0s)
+  ↪ critic-fail recovery: planner node n:31 for n:28
+[n:31] planner            complete (6.3s)
+[n:32] researcher         complete (157.3s)
+[n:33] formatter          complete (13.8s)
+
+──────────────────────────────────────────────────────────────────────────────
+node   skill                 start (rel)    elapsed  finish (rel)
+n:1    planner                   0.02 s   10.25 s      10.27 s
+n:2    researcher               10.29 s  134.29 s     144.58 s
+n:4    browser                 145.65 s   15.25 s     160.90 s
+n:5    browser                 157.84 s    3.07 s     160.90 s
+n:3    browser                 159.81 s    1.08 s     160.90 s
+n:8    planner                 160.92 s    9.09 s     170.01 s
+n:10   researcher              170.41 s  253.07 s     423.48 s
+n:9    browser                 422.51 s    0.95 s     423.46 s
+n:11   distiller               423.53 s   19.58 s     443.12 s
+n:13   critic                  443.15 s    3.47 s     446.62 s
+n:14   planner                 446.63 s    8.13 s     454.76 s
+n:15   researcher              678.58 s    0.00 s     678.58 s
+n:21   planner                 678.61 s    8.33 s     686.94 s
+n:22   browser                 686.96 s   14.45 s     701.40 s
+n:23   browser                 699.90 s    1.50 s     701.41 s
+n:26   planner                 701.44 s    7.83 s     709.27 s
+n:27   browser                 709.29 s    1.52 s     710.81 s
+n:28   distiller               710.83 s   21.95 s     732.78 s
+n:30   critic                  732.80 s    2.99 s     735.80 s
+n:31   planner                 735.81 s    6.26 s     742.06 s
+n:32   researcher              742.08 s  157.28 s     899.36 s
+n:33   formatter               899.39 s   13.78 s     913.18 s
+
+wall-clock end-to-end:             913.18 s
+sum-of-elapsed (serial):           694.12 s
+parallel speedup ratio:            0.76x
+──────────────────────────────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────────────────────────────
+BROWSER SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+
+  [n:3] status=complete  path=extract  turns=0  url=https://www.scaler.com/topics/best-ai-courses-in-india/
+         goal: extract course fees, duration, ratings, feedback, enrollment dates, and registration deadlines from this course page
+         screenshots: none
+         extracted data (25995 chars):
+           Best AI Courses Online with Certificates in India ↵ Since many pre-trained models have emerged in the earlier decade, from companies to even non-working individuals have become accustomed to using AI. The localization of AI is to the point that its usage doesn’t stop at complex sectors like tech and healthcare, but now different industries and sectors too demand skills in AI and ML. ↵ At Scaler, we’ve seen how professionals from diverse fields are turning to AI courses in India to have a clear shot 
+           ... (25495 more chars)
+
+  [n:4] status=failed  path=extract  turns=0  url=https://pwskills.com/data-science-and-analytics/data-science-with-generative-ai-course-245535/
+         goal: extract course fees, duration, ratings, feedback, enrollment dates, and registration deadlines from this course page
+         error: gateway_blocked (recaptcha) detected after JS render at https://pwskills.com/data-science-and-analytics/data-science-wit
+         screenshots: none
+
+  [n:5] status=complete  path=extract  turns=0  url=https://intellipaat.com/artificial-intelligence-certification/
+         goal: extract course fees, duration, ratings, feedback, enrollment dates, and registration deadlines from this course page
+         screenshots: (no artifacts dir)
+         extracted data (17996 chars):
+           Your cart is currently empty. ↵ - Live online classes from IIT Faculty and top 1% of Industry Experts ↵ - Intensive curriculum built specially for undergrad students that enables you to grow like a Pro! ↵ - Get placement support for 18 months from program start date ↵ - Get certified from iHub, IIT Roorkee (An Innovation hub of IIT Roorkee) ↵ In collaboration with ↵ 					 ↵ 				10 Months PROGRAM ↵ Eligibility ↵ Undergraduate Students ↵ & Diploma Holders ↵ Upskill ↵ 8 Hours a Week ↵ Alongside Your College ↵ Learn from Top ↵ I
+           ... (17496 more chars)
+
+  [n:9] status=complete  path=extract  turns=0  url=https://intellipaat.com/artificial-intelligence-certification/
+         goal: extract course fees, duration, ratings, feedback, enrollment dates, and registration deadlines from this AI course page
+         screenshots: (no artifacts dir)
+         extracted data (17996 chars):
+           Your cart is currently empty. ↵ - Live online classes from IIT Faculty and top 1% of Industry Experts ↵ - Intensive curriculum built specially for undergrad students that enables you to grow like a Pro! ↵ - Get placement support for 18 months from program start date ↵ - Get certified from iHub, IIT Roorkee (An Innovation hub of IIT Roorkee) ↵ In collaboration with ↵ 					 ↵ 				10 Months PROGRAM ↵ Eligibility ↵ Undergraduate Students ↵ & Diploma Holders ↵ Upskill ↵ 8 Hours a Week ↵ Alongside Your College ↵ Learn from Top ↵ I
+           ... (17496 more chars)
+
+  [n:16] status=pending  path=n/a  turns=0  url=n/a
+         screenshots: (no artifacts dir)
+
+  [n:17] status=pending  path=n/a  turns=0  url=n/a
+         screenshots: (no artifacts dir)
+
+  [n:18] status=pending  path=n/a  turns=0  url=n/a
+         screenshots: (no artifacts dir)
+
+  [n:22] status=failed  path=extract  turns=0  url=https://pwskills.com/data-science-and-analytics/data-science-with-generative-ai-course-245535/
+         goal: extract course fees, duration, ratings, feedback, enrollment dates, and registration deadlines from this PW Skills Data Science course page
+         error: gateway_blocked (recaptcha) detected after JS render at https://pwskills.com/data-science-and-analytics/data-science-wit
+         screenshots: (no artifacts dir)
+
+  [n:23] status=complete  path=extract  turns=0  url=https://intellipaat.com/artificial-intelligence-certification/
+         goal: extract course fees, duration, ratings, feedback, enrollment dates, and registration deadlines from this Intellipaat AI certification course page
+         screenshots: (no artifacts dir)
+         extracted data (17996 chars):
+           Your cart is currently empty. ↵ - Live online classes from IIT Faculty and top 1% of Industry Experts ↵ - Intensive curriculum built specially for undergrad students that enables you to grow like a Pro! ↵ - Get placement support for 18 months from program start date ↵ - Get certified from iHub, IIT Roorkee (An Innovation hub of IIT Roorkee) ↵ In collaboration with ↵ 					 ↵ 				10 Months PROGRAM ↵ Eligibility ↵ Undergraduate Students ↵ & Diploma Holders ↵ Upskill ↵ 8 Hours a Week ↵ Alongside Your College ↵ Learn from Top ↵ I
+           ... (17496 more chars)
+
+  [n:27] status=complete  path=extract  turns=0  url=https://intellipaat.com/artificial-intelligence-certification/
+         goal: extract course fees, duration, ratings, feedback, enrollment dates from this AI certification course page
+         screenshots: (no artifacts dir)
+         extracted data (17996 chars):
+           Your cart is currently empty. ↵ - Live online classes from IIT Faculty and top 1% of Industry Experts ↵ - Intensive curriculum built specially for undergrad students that enables you to grow like a Pro! ↵ - Get placement support for 18 months from program start date ↵ - Get certified from iHub, IIT Roorkee (An Innovation hub of IIT Roorkee) ↵ In collaboration with ↵ 					 ↵ 				10 Months PROGRAM ↵ Eligibility ↵ Undergraduate Students ↵ & Diploma Holders ↵ Upskill ↵ 8 Hours a Week ↵ Alongside Your College ↵ Learn from Top ↵ I
+           ... (17496 more chars)
+
+──────────────────────────────────────────────────────────────────────────────
+TURN COUNT & COST SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+  skill                 nodes   cost ($)
+  ──────────────────────────────────────
+  browser                  10          —
+  critic                    2          —
+  distiller                 5          —
+  formatter                 6          —
+  planner                   6          —
+  researcher                4          —
+  ──────────────────────────────────────
+  TOTAL                    33          —
+
+  total browser turns: 0
+  total nodes executed: 22
+──────────────────────────────────────────────────────────────────────────────
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: ### Comparison of Online AI Courses for Working Professionals
+
+| Field          | UpGrad's AI Course                          | NovelVista's Generative AI Training       | Softlogic Systems' AI Training          |
+|----------------|---------------------------------------------|-------------------------------------------|-----------------------------------------|
+| Fees           | Not specified                              | INR 20,000                                | Not specified                           |
+| Duration       | Not specified                              | Not specified                             | 1.5 months                              |
+| Ratings        | Average salary hike of 51%                 | 4.9 rating                                | 4.90 rating                             |
+| Feedback       | Accredited, industry experts               | 1000+ professionals, 98% salary growth   | 33,632 reviews, 100% placement assurance|
+| Registration   | Not specified                              | Not specified                             | Available in weekday/weekend batches   |
+
+### Top 3 Courses Based on Value for Money
+1. NovelVista's Generative AI Professional Training
+2. Softlogic Systems' Artificial Intelligence Online Training
+3. UpGrad's Artificial Intelligence Course
+
+### Recommendation
+NovelVista's Generative AI Professional Training is recommended for its clear pricing, high rating, and comprehensive feedback.
+══════════════════════════════════════════════════════════════════════════════
+

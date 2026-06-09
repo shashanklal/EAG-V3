@@ -1,0 +1,114 @@
+
+══════════════════════════════════════════════════════════════════════════════
+session s8-96197e83  ─  query: Compare the top 3 'Offline AI Courses for working professional 20+ experience'. For each course, extract the fees,duration, ratings, duration. Rate top 3 based on feedback, value for money and which can be registered in next 3 months. Present findings in a comparison table.
+══════════════════════════════════════════════════════════════════════════════
+[n:1] planner            complete (5.4s)
+[n:2] researcher         complete (215.4s)
+[n:3] distiller          complete (4.3s)
+[n:5] critic             complete (3.5s)
+  ↪ critic-fail recovery: planner node n:6 for n:3
+[n:6] planner            complete (9.5s)
+[n:7] browser            failed   (311.8s)  err=all layers exhausted; last: giveup after 3 consecutive failures
+       browser: path=extract  turns=35  url=https://www.coursera.org
+  ↪ recovery (upstream_failure): planner node n:10 queued for n:7; reusing 2 prior result(s): n:2, n:3
+[n:10] planner            complete (16.9s)
+[n:11] researcher         complete (70.1s)
+[n:12] researcher         complete (70.1s)
+[n:13] distiller          complete (14.6s)
+[n:15] critic             complete (3.6s)
+  ↪ critic-fail recovery: planner node n:16 for n:13
+[n:16] planner            complete (5.5s)
+[n:17] researcher         complete (67.4s)
+[n:18] distiller          complete (9.5s)
+[n:20] critic             complete (3.6s)
+  ↪ critic-fail recovery: planner node n:21 for n:18
+[n:21] planner            complete (6.2s)
+[n:22] researcher         complete (58.1s)
+[n:23] distiller          complete (5.0s)
+[n:24] critic             complete (3.6s)
+  ↪ critic-fail recovery: planner node n:27 for n:23
+[n:26] critic             complete (5.7s)
+  ↪ critic-fail on n:23 already recovered once; CAP HIT — branch skipped, final will reflect missing data
+[n:27] planner            complete (7.4s)
+[n:28] researcher         complete (70.2s)
+[n:29] distiller          complete (4.6s)
+[n:31] critic             complete (3.4s)
+[n:30] formatter          complete (4.8s)
+
+[flow] WARNING: critic-fail cap hit on 1 branch(es): n:23. The final answer reflects missing data from these branches because the Critic rejected the re-planned output too.
+
+──────────────────────────────────────────────────────────────────────────────
+node   skill                 start (rel)    elapsed  finish (rel)
+n:1    planner                   0.01 s    5.45 s       5.45 s
+n:2    researcher                5.49 s  215.41 s     220.90 s
+n:3    distiller               220.92 s    4.33 s     225.25 s
+n:5    critic                  225.27 s    3.48 s     228.75 s
+n:6    planner                 228.76 s    9.47 s     238.23 s
+n:7    browser                 239.20 s  311.84 s     551.04 s
+n:10   planner                 551.11 s   16.94 s     568.05 s
+n:12   researcher              568.12 s   70.12 s     638.24 s
+n:11   researcher              568.17 s   70.06 s     638.24 s
+n:13   distiller               638.29 s   14.55 s     652.84 s
+n:15   critic                  652.88 s    3.56 s     656.44 s
+n:16   planner                 656.46 s    5.51 s     661.97 s
+n:17   researcher              661.98 s   67.37 s     729.35 s
+n:18   distiller               729.37 s    9.50 s     738.88 s
+n:20   critic                  738.89 s    3.60 s     742.49 s
+n:21   planner                 742.52 s    6.22 s     748.74 s
+n:22   researcher              748.75 s   58.14 s     806.89 s
+n:23   distiller               806.91 s    5.00 s     811.91 s
+n:26   critic                  811.94 s    5.67 s     817.61 s
+n:24   critic                  813.97 s    3.63 s     817.61 s
+n:27   planner                 817.63 s    7.44 s     825.07 s
+n:28   researcher              825.08 s   70.25 s     895.33 s
+n:29   distiller               895.36 s    4.65 s     900.00 s
+n:31   critic                  900.02 s    3.37 s     903.39 s
+n:30   formatter               903.43 s    4.77 s     908.20 s
+
+wall-clock end-to-end:             908.21 s
+sum-of-elapsed (serial):           980.32 s
+parallel speedup ratio:            1.08x
+──────────────────────────────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────────────────────────────
+BROWSER SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+
+  [n:7] status=failed  path=extract  turns=35  url=https://www.coursera.org
+         goal: search for 'offline AI courses' or 'in-person artificial intelligence courses' for working professionals, filter by instructor-led or classroom format, and identify the top 3 highest-rated courses with their titles, fees, duration, ratings, and enrollment information
+         error: all layers exhausted; last: giveup after 3 consecutive failures
+         screenshots (50):
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_01_raw.png
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_02_raw.png
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_03_raw.png
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_04_raw.png
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_05_raw.png
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_06_raw.png
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_07_raw.png
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_08_raw.png
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_09_raw.png
+           sessions\s8-96197e83\browser\browser_1780925243\a11y\turn_10_raw.png
+           ... and 40 more
+
+──────────────────────────────────────────────────────────────────────────────
+TURN COUNT & COST SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+  skill                 nodes   cost ($)
+  ──────────────────────────────────────
+  browser                   1          —
+  critic                    6          —
+  distiller                 6          —
+  formatter                 6          —
+  planner                   6          —
+  researcher                6          —
+  ──────────────────────────────────────
+  TOTAL                    31          —
+
+  total browser turns: 35
+  total nodes executed: 25
+──────────────────────────────────────────────────────────────────────────────
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The specific details for the top 3 offline AI courses for working professionals with 20+ years of experience were not found. The available sources did not provide structured data on course names, fees, durations, ratings, or enrollment dates.
+══════════════════════════════════════════════════════════════════════════════
+

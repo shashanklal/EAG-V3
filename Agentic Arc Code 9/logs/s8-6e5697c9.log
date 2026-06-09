@@ -1,0 +1,77 @@
+
+══════════════════════════════════════════════════════════════════════════════
+session s8-6e5697c9  ─  query: Compare the top 3 'Offline AI Courses for working professional 20+ experience' provided by IIT's/ IIM's. For each course, extract the fees,duration, ratings or feedbacks if any, duration. Rate top 3 based on value for money and which can be registered in next 3 months. Present findings in a comparison table.
+══════════════════════════════════════════════════════════════════════════════
+[memory.read] 2 hit(s) visible to every skill this run
+[n:1] planner            complete (7.7s)
+[n:2] researcher         complete (62.3s)
+[n:3] distiller          complete (6.1s)
+[n:5] critic             complete (3.6s)
+  ↪ critic-fail recovery: planner node n:6 for n:3
+[n:6] planner            complete (5.6s)
+[n:7] retriever          complete (13.0s)
+[n:8] researcher         complete (91.6s)
+[n:9] formatter          complete (13.9s)
+
+──────────────────────────────────────────────────────────────────────────────
+node   skill                 start (rel)    elapsed  finish (rel)
+n:1    planner                   0.01 s    7.71 s       7.72 s
+n:2    researcher                7.72 s   62.34 s      70.06 s
+n:3    distiller                70.08 s    6.09 s      76.17 s
+n:5    critic                   76.19 s    3.64 s      79.83 s
+n:6    planner                  79.84 s    5.64 s      85.48 s
+n:8    researcher               85.52 s   91.59 s     177.10 s
+n:7    retriever               164.15 s   12.95 s     177.10 s
+n:9    formatter               177.12 s   13.92 s     191.04 s
+
+wall-clock end-to-end:             191.05 s
+sum-of-elapsed (serial):           203.88 s
+parallel speedup ratio:            1.07x
+──────────────────────────────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────────────────────────────
+TURN COUNT & COST SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+  skill                 nodes   cost ($)
+  ──────────────────────────────────────
+  critic                    1          —
+  distiller                 1          —
+  formatter                 2          —
+  planner                   2          —
+  researcher                2          —
+  retriever                 1          —
+  ──────────────────────────────────────
+  TOTAL                     9          —
+
+  total browser turns: 0
+  total nodes executed: 8
+──────────────────────────────────────────────────────────────────────────────
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The search did not yield specific offline AI courses for working professionals with 20+ years of experience from IITs/IIMs. However, several online AI courses are available, offered by prestigious institutions. Here's a comparison of some relevant online programs:
+
+| Field        | Executive Post Graduate Programme in Applied AI and Agentic AI | Professional Certificate Programme in AI for Business Professionals | Executive Diploma in Machine Learning and AI |
+|--------------|-------------------------------|-------------------------------|-------------------------------|
+| Fees     | Not explicitly mentioned      | Not explicitly mentioned      | Not explicitly mentioned      |
+| Duration | Not explicitly mentioned      | 6 months                      | 12 months                      |
+| Ratings/Feedback | Not available             | Not available                 | Not available                 |
+| Registration within 3 months | Not explicitly mentioned | Not explicitly mentioned      | Not explicitly mentioned      |
+
+For IIT Madras' SWAYAM Plus courses:
+| Field        | AI for Aspiring Engineers | AI for Administrators | Prompt Engineering |
+|--------------|---------------------------|------------------------|--------------------|
+| Fees     | ₹500 + GST                | ₹100 + GST             | ₹100 + GST         |
+| Duration | Not explicitly mentioned | Not explicitly mentioned | Not explicitly mentioned |
+| Ratings/Feedback | Not available             | Not available          | Not available      |
+| Registration within 3 months | Possible as deadlines are in May 2026 | Possible as deadlines are in May 2026 | Possible as deadlines are in May 2026 |
+
+Ranking:
+1. Executive Post Graduate Programme in Applied AI and Agentic AI
+2. Executive Diploma in Machine Learning and AI
+3. Professional Certificate Programme in AI for Business Professionals
+
+Sources:
+1. https://www.upgrad.com/iit-iim-online-courses/
+2. https://www.iitm.ac.in/happenings/press-releases-and-coverages/iit-madras-swayam-plus-launches-three-new-ai-courses
+══════════════════════════════════════════════════════════════════════════════
+
