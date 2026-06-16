@@ -1,0 +1,53 @@
+
+══════════════════════════════════════════════════════════════════════════════
+session s8-352282d0  ─  query: Use the computer skill to open a new instance of VS Code. Create a new python file and write Python code in that file that reads a CSV file. Confirm deterministic layer usage. Fix any indentation or code issue if it exists.
+══════════════════════════════════════════════════════════════════════════════
+[memory.read] 8 hit(s) visible to every skill this run
+[n:1] planner            complete (4.7s)
+[n:2] computer           complete (1.6s)
+       computer: path=deterministic  turns=4  task=vscode_csv_code
+[n:3] formatter          complete (7.9s)
+
+──────────────────────────────────────────────────────────────────────────────
+node   skill                 start (rel)    elapsed  finish (rel)
+n:1    planner                   0.02 s    4.65 s       4.67 s
+n:2    computer                  4.96 s    1.55 s       6.51 s
+n:3    formatter                 6.55 s    7.86 s      14.41 s
+
+wall-clock end-to-end:             14.42 s
+sum-of-elapsed (serial):           14.06 s
+parallel speedup ratio:            0.98x
+──────────────────────────────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────────────────────────────
+COMPUTER SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+
+  [n:2] status=complete  path=deterministic  turns=4  task=vscode_csv_code
+         goal: Open VS Code and type Python CSV-reading code
+         trajectory: C:\Users\slal5\OneDrive - UHG\Work\4_VSCode\Agentic Architecture\Agentic Arc Code 10\S10Code\code\state\sessions\s8-352282d0\computer\vscode_csv_code_1781597482\trajectory
+         actions (4):
+           turn 1: hotkey
+           turn 2: press_key
+           turn 3: type_text
+           turn 4: get_window_state
+
+──────────────────────────────────────────────────────────────────────────────
+TURN COUNT & COST SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+  skill                 nodes   cost ($)
+  ──────────────────────────────────────
+  computer                  1          —
+  formatter                 1          —
+  planner                   1          —
+  ──────────────────────────────────────
+  TOTAL                     3          —
+
+  total browser/computer turns: 4
+  total nodes executed: 3
+──────────────────────────────────────────────────────────────────────────────
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: Computer skill completed vscode_csv_code. Goal: Open VS Code and type Python CSV-reading code. Layer used: deterministic.
+══════════════════════════════════════════════════════════════════════════════
+
