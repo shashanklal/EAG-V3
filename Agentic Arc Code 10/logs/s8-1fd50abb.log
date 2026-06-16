@@ -1,0 +1,51 @@
+
+══════════════════════════════════════════════════════════════════════════════
+session s8-1fd50abb  ─  query: Use the computer skill to calculate (25*4)/5 using the calculator. Confirm that the deterministic hotkeys layer was used.
+══════════════════════════════════════════════════════════════════════════════
+[memory.read] 8 hit(s) visible to every skill this run
+[n:1] planner            complete (4.5s)
+[n:2] computer           complete (2.5s)
+       computer: path=deterministic  turns=2  task=calculator_hotkeys
+[n:3] formatter          complete (4.7s)
+
+──────────────────────────────────────────────────────────────────────────────
+node   skill                 start (rel)    elapsed  finish (rel)
+n:1    planner                   0.00 s    4.47 s       4.47 s
+n:2    computer                  4.61 s    2.54 s       7.16 s
+n:3    formatter                 7.17 s    4.74 s      11.91 s
+
+wall-clock end-to-end:             11.91 s
+sum-of-elapsed (serial):           11.76 s
+parallel speedup ratio:            0.99x
+──────────────────────────────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────────────────────────────
+COMPUTER SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+
+  [n:2] status=complete  path=deterministic  turns=2  task=calculator_hotkeys
+         goal: Compute (25*4)/5 using deterministic keyboard actions
+         trajectory: C:\Users\slal5\OneDrive - UHG\Work\4_VSCode\Agentic Architecture\Agentic Arc Code 10\S10Code\code\state\sessions\s8-1fd50abb\computer\calculator_hotkeys_1781594715\trajectory
+         actions (2):
+           turn 1: type_text
+           turn 2: get_window_state
+
+──────────────────────────────────────────────────────────────────────────────
+TURN COUNT & COST SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+  skill                 nodes   cost ($)
+  ──────────────────────────────────────
+  computer                  1          —
+  formatter                 1          —
+  planner                   1          —
+  ──────────────────────────────────────
+  TOTAL                     3          —
+
+  total browser/computer turns: 2
+  total nodes executed: 3
+──────────────────────────────────────────────────────────────────────────────
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The result of (25*4)/5 is 20. The calculation was performed using the deterministic hotkeys layer.
+══════════════════════════════════════════════════════════════════════════════
+
