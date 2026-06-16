@@ -1,0 +1,165 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "skill": "planner",
+      "inputs": [
+        "USER_QUERY"
+      ],
+      "metadata": {},
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "planner",
+        "output": {
+          "rationale": "Use computer skill to calculate (25*4)/5 with calculator and confirm hotkeys layer usage.",
+          "nodes": [
+            {
+              "skill": "computer",
+              "inputs": [
+                "USER_QUERY"
+              ],
+              "metadata": {
+                "label": "calc",
+                "task": "calculator_hotkeys",
+                "expression": "(25*4)/5"
+              }
+            },
+            {
+              "skill": "formatter",
+              "inputs": [
+                "USER_QUERY",
+                "n:calc"
+              ],
+              "metadata": {
+                "label": "out"
+              }
+            }
+          ]
+        },
+        "artifacts": [],
+        "successors": [
+          {
+            "skill": "computer",
+            "inputs": [
+              "USER_QUERY"
+            ],
+            "metadata": {
+              "label": "calc",
+              "task": "calculator_hotkeys",
+              "expression": "(25*4)/5"
+            }
+          },
+          {
+            "skill": "formatter",
+            "inputs": [
+              "USER_QUERY",
+              "n:calc"
+            ],
+            "metadata": {
+              "label": "out"
+            }
+          }
+        ],
+        "cost": 0.0,
+        "elapsed_s": 4.472438812255859,
+        "provider": "claude_s4",
+        "error": null,
+        "error_code": null
+      },
+      "_result_typed": true,
+      "id": "n:1"
+    },
+    {
+      "skill": "computer",
+      "inputs": [
+        "USER_QUERY"
+      ],
+      "metadata": {
+        "label": "calc",
+        "task": "calculator_hotkeys",
+        "expression": "(25*4)/5"
+      },
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "computer",
+        "output": {
+          "task": "calculator_hotkeys",
+          "title": "Calculator deterministic hotkeys",
+          "path": "deterministic",
+          "goal": "Compute (25*4)/5 using deterministic keyboard actions",
+          "result": "20",
+          "notes": "Layer 2a deterministic hotkeys completed",
+          "trajectory_dir": "C:\\Users\\slal5\\OneDrive - UHG\\Work\\4_VSCode\\Agentic Architecture\\Agentic Arc Code 10\\S10Code\\code\\state\\sessions\\s8-1fd50abb\\computer\\calculator_hotkeys_1781594715\\trajectory",
+          "actions": [
+            {
+              "turn": 1,
+              "tool": "type_text",
+              "args": {
+                "pid": 31620,
+                "window_id": 592042,
+                "text": "(25*4)/5="
+              }
+            },
+            {
+              "turn": 2,
+              "tool": "get_window_state",
+              "args": {
+                "pid": 31620,
+                "window_id": 592042,
+                "capture_mode": "ax",
+                "query": "20"
+              }
+            }
+          ],
+          "turns": 2
+        },
+        "artifacts": [],
+        "successors": [],
+        "cost": 0.0,
+        "elapsed_s": 2.5443975925445557,
+        "provider": "",
+        "error": null,
+        "error_code": null
+      },
+      "_result_typed": true,
+      "id": "n:2"
+    },
+    {
+      "skill": "formatter",
+      "inputs": [
+        "USER_QUERY",
+        "n:2"
+      ],
+      "metadata": {
+        "label": "out"
+      },
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "formatter",
+        "output": {
+          "final_answer": "The result of (25*4)/5 is 20. The calculation was performed using the deterministic hotkeys layer."
+        },
+        "artifacts": [],
+        "successors": [],
+        "cost": 0.0,
+        "elapsed_s": 4.740824222564697,
+        "provider": "llama4_mav",
+        "error": null,
+        "error_code": null
+      },
+      "_result_typed": true,
+      "id": "n:3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n:2",
+      "target": "n:3"
+    }
+  ]
+}

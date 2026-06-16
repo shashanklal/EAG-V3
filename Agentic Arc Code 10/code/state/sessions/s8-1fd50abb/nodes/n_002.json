@@ -1,0 +1,54 @@
+{
+  "node_id": "n:2",
+  "skill": "computer",
+  "status": "complete",
+  "inputs": [
+    "USER_QUERY"
+  ],
+  "result": {
+    "success": true,
+    "agent_name": "computer",
+    "output": {
+      "task": "calculator_hotkeys",
+      "title": "Calculator deterministic hotkeys",
+      "path": "deterministic",
+      "goal": "Compute (25*4)/5 using deterministic keyboard actions",
+      "result": "20",
+      "notes": "Layer 2a deterministic hotkeys completed",
+      "trajectory_dir": "C:\\Users\\slal5\\OneDrive - UHG\\Work\\4_VSCode\\Agentic Architecture\\Agentic Arc Code 10\\S10Code\\code\\state\\sessions\\s8-1fd50abb\\computer\\calculator_hotkeys_1781594715\\trajectory",
+      "actions": [
+        {
+          "turn": 1,
+          "tool": "type_text",
+          "args": {
+            "pid": 31620,
+            "window_id": 592042,
+            "text": "(25*4)/5="
+          }
+        },
+        {
+          "turn": 2,
+          "tool": "get_window_state",
+          "args": {
+            "pid": 31620,
+            "window_id": 592042,
+            "capture_mode": "ax",
+            "query": "20"
+          }
+        }
+      ],
+      "turns": 2
+    },
+    "artifacts": [],
+    "successors": [],
+    "cost": 0.0,
+    "elapsed_s": 2.5443975925445557,
+    "provider": "",
+    "error": null,
+    "error_code": null
+  },
+  "prompt_sent": "The Computer skill controls host desktop apps through cua-driver using a\nfive-layer execution contract.\n\nExecution layers:\n  Layer 1   plan and normalize a concrete computer task from metadata\n  Layer 2a  deterministic hotkeys / scripted actions\n  Layer 2b  semantic accessibility interpretation through V9 /v1/chat\n  Layer 3   vision fallback through V9 /v1/vision\n  Layer 4   verify/recover and return typed evidence\n\nRequired metadata:\n  metadata.task must be one of:\n    - calculator_hotkeys\n    - vscode_csv_code\n    - maps_distance\n\nOptional metadata:\n  expression (for calculator_hotkeys, default: 25*4)\n  home, office (for maps_distance)\n\nThe skill always starts cua-driver recording via start_recording and stops it\nat the end. It returns the trajectory directory in output.trajectory_dir.\n\nOutput contract:\n  - output.path: layer used (deterministic | a11y | vision)\n  - output.turns: number of driver calls\n  - output.actions: driver actions performed\n  - output.trajectory_dir: evidence path for replay\n\nUSER_QUERY: Use the computer skill to calculate (25*4)/5 using the calculator. Confirm that the deterministic hotkeys layer was used.\n\nMEMORY HITS (8 from FAISS):\n  - [tool_outcome] Calculator used to compute (25*4)/5, confirming hotkey layer usage.\n      source: user_query\n  - [tool_outcome] Calculator used to compute (25*4)/5, confirming hotkey layer usage.\n      source: user_query\n  - [tool_outcome] Calculated (5*((25*4)/5)/2) using a calculator, confirming use of hotkeys.\n      source: user_query\n  - [tool_outcome] Calculator used to compute 25*4, confirming deterministic hotkeys.\n      source: user_query\n  - [tool_outcome] Calculator used to compute 25*4, confirming deterministic hotkeys.\n      source: user_query\n  - [tool_outcome] Calculator used to compute 25*4, confirming deterministic hotkeys.\n      source: user_query\n  - [tool_outcome] Calculator used to compute 25*4, confirming deterministic hotkeys.\n      source: user_query\n  - [tool_outcome] Calculator used to compute 25*4, confirming deterministic hotkeys.\n      source: user_query\n\nINPUTS:\n[\n  {\n    \"id\": \"USER_QUERY\",\n    \"kind\": \"query\",\n    \"value\": \"Use the computer skill to calculate (25*4)/5 using the calculator. Confirm that the deterministic hotkeys layer was used.\"\n  }\n]",
+  "started_at": 1781594715.9275048,
+  "completed_at": 1781594718.4719024,
+  "retries": 0
+}

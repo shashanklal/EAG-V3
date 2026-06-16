@@ -1,0 +1,1 @@
+Use the computer skill to open a new instance of VS Code. Create a new python file and write Python code in that file that reads a CSV file. Confirm deterministic layer usage. Fix any indentation or code issue if it exists.

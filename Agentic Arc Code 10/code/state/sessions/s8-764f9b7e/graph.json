@@ -1,0 +1,199 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "skill": "planner",
+      "inputs": [
+        "USER_QUERY"
+      ],
+      "metadata": {},
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "planner",
+        "output": {
+          "rationale": "Use computer skill to open Chrome, navigate to Google Maps, and find travel options from Delhi to Mumbai.",
+          "nodes": [
+            {
+              "skill": "computer",
+              "inputs": [
+                "USER_QUERY"
+              ],
+              "metadata": {
+                "label": "maps",
+                "task": "maps_distance",
+                "home": "Delhi",
+                "office": "Mumbai"
+              }
+            },
+            {
+              "skill": "formatter",
+              "inputs": [
+                "USER_QUERY",
+                "n:maps"
+              ],
+              "metadata": {
+                "label": "out"
+              }
+            }
+          ]
+        },
+        "artifacts": [],
+        "successors": [
+          {
+            "skill": "computer",
+            "inputs": [
+              "USER_QUERY"
+            ],
+            "metadata": {
+              "label": "maps",
+              "task": "maps_distance",
+              "home": "Delhi",
+              "office": "Mumbai"
+            }
+          },
+          {
+            "skill": "formatter",
+            "inputs": [
+              "USER_QUERY",
+              "n:maps"
+            ],
+            "metadata": {
+              "label": "out"
+            }
+          }
+        ],
+        "cost": 0.0,
+        "elapsed_s": 5.801149129867554,
+        "provider": "claude_s4",
+        "error": null,
+        "error_code": null
+      },
+      "_result_typed": true,
+      "id": "n:1"
+    },
+    {
+      "skill": "computer",
+      "inputs": [
+        "USER_QUERY"
+      ],
+      "metadata": {
+        "label": "maps",
+        "task": "maps_distance",
+        "home": "Delhi",
+        "office": "Mumbai"
+      },
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "computer",
+        "output": {
+          "task": "maps_distance",
+          "title": "Google Maps distance",
+          "path": "vision",
+          "goal": "Read travel distance from Delhi to Mumbai",
+          "distance": "1,390 km",
+          "url": "https://www.google.com/maps/dir/Delhi/Mumbai",
+          "screenshot": "C:\\Users\\slal5\\OneDrive - UHG\\Work\\4_VSCode\\Agentic Architecture\\Agentic Arc Code 10\\S10Code\\code\\state\\sessions\\s8-764f9b7e\\computer\\maps_distance_1781594489\\maps_vision.png",
+          "notes": "Layer 3 vision fallback succeeded",
+          "trajectory_dir": "C:\\Users\\slal5\\OneDrive - UHG\\Work\\4_VSCode\\Agentic Architecture\\Agentic Arc Code 10\\S10Code\\code\\state\\sessions\\s8-764f9b7e\\computer\\maps_distance_1781594489\\trajectory",
+          "actions": [
+            {
+              "turn": 1,
+              "tool": "hotkey",
+              "args": {
+                "keys": [
+                  "ctrl",
+                  "l"
+                ]
+              }
+            },
+            {
+              "turn": 2,
+              "tool": "type_text",
+              "args": {
+                "pid": 39668,
+                "window_id": 329604,
+                "text": "https://www.google.com/maps/dir/Delhi/Mumbai"
+              }
+            },
+            {
+              "turn": 3,
+              "tool": "press_key",
+              "args": {
+                "pid": 39668,
+                "window_id": 329604,
+                "key": "Enter"
+              }
+            },
+            {
+              "turn": 4,
+              "tool": "get_window_state",
+              "args": {
+                "pid": 39668,
+                "window_id": 329604,
+                "capture_mode": "ax",
+                "query": "mi km"
+              }
+            },
+            {
+              "turn": 5,
+              "tool": "get_window_state",
+              "args": {
+                "pid": 39668,
+                "window_id": 329604,
+                "capture_mode": "vision",
+                "screenshot_out_file": "C:\\Users\\slal5\\OneDrive - UHG\\Work\\4_VSCode\\Agentic Architecture\\Agentic Arc Code 10\\S10Code\\code\\state\\sessions\\s8-764f9b7e\\computer\\maps_distance_1781594489\\maps_vision.png"
+              }
+            }
+          ],
+          "turns": 5
+        },
+        "artifacts": [],
+        "successors": [],
+        "cost": 0.0,
+        "elapsed_s": 44.54193162918091,
+        "provider": "",
+        "error": null,
+        "error_code": null
+      },
+      "_result_typed": true,
+      "id": "n:2"
+    },
+    {
+      "skill": "formatter",
+      "inputs": [
+        "USER_QUERY",
+        "n:2"
+      ],
+      "metadata": {
+        "label": "out"
+      },
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "formatter",
+        "output": {
+          "final_answer": "The distance between Delhi and Mumbai is 1,390 km. For detailed travel options such as by flight, train, bus, or car, you can visit [Google Maps](https://www.google.com/maps/dir/Delhi/Mumbai) for the most up-to-date information and directions."
+        },
+        "artifacts": [],
+        "successors": [],
+        "cost": 0.0,
+        "elapsed_s": 6.254245042800903,
+        "provider": "llama4_mav",
+        "error": null,
+        "error_code": null
+      },
+      "_result_typed": true,
+      "id": "n:3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n:2",
+      "target": "n:3"
+    }
+  ]
+}

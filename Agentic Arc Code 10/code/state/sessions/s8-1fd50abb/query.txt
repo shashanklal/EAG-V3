@@ -1,0 +1,1 @@
+Use the computer skill to calculate (25*4)/5 using the calculator. Confirm that the deterministic hotkeys layer was used.

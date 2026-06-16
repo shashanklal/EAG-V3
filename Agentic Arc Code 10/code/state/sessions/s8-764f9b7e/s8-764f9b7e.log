@@ -1,0 +1,54 @@
+
+══════════════════════════════════════════════════════════════════════════════
+session s8-764f9b7e  ─  query: Use the computer skill to open a new instance of Chrome. Browse google maps. Find the different travel options from Delhi to Mumbai.
+══════════════════════════════════════════════════════════════════════════════
+[memory.read] 8 hit(s) visible to every skill this run
+[n:1] planner            complete (5.8s)
+[n:2] computer           complete (44.5s)
+       computer: path=vision  turns=5  task=maps_distance
+[n:3] formatter          complete (6.3s)
+
+──────────────────────────────────────────────────────────────────────────────
+node   skill                 start (rel)    elapsed  finish (rel)
+n:1    planner                   0.01 s    5.80 s       5.81 s
+n:2    computer                  5.93 s   44.54 s      50.47 s
+n:3    formatter                50.60 s    6.25 s      56.85 s
+
+wall-clock end-to-end:             56.85 s
+sum-of-elapsed (serial):           56.60 s
+parallel speedup ratio:            1.00x
+──────────────────────────────────────────────────────────────────────────────
+
+──────────────────────────────────────────────────────────────────────────────
+COMPUTER SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+
+  [n:2] status=complete  path=vision  turns=5  task=maps_distance
+         goal: Read travel distance from Delhi to Mumbai
+         trajectory: C:\Users\slal5\OneDrive - UHG\Work\4_VSCode\Agentic Architecture\Agentic Arc Code 10\S10Code\code\state\sessions\s8-764f9b7e\computer\maps_distance_1781594489\trajectory
+         actions (5):
+           turn 1: hotkey
+           turn 2: type_text
+           turn 3: press_key
+           turn 4: get_window_state
+           turn 5: get_window_state
+
+──────────────────────────────────────────────────────────────────────────────
+TURN COUNT & COST SUMMARY
+──────────────────────────────────────────────────────────────────────────────
+  skill                 nodes   cost ($)
+  ──────────────────────────────────────
+  computer                  1          —
+  formatter                 1          —
+  planner                   1          —
+  ──────────────────────────────────────
+  TOTAL                     3          —
+
+  total browser/computer turns: 5
+  total nodes executed: 3
+──────────────────────────────────────────────────────────────────────────────
+
+══════════════════════════════════════════════════════════════════════════════
+FINAL: The distance between Delhi and Mumbai is 1,390 km. For detailed travel options such as by flight, train, bus, or car, you can visit [Google Maps](https://www.google.com/maps/dir/Delhi/Mumbai) for the most up-to-date information and directions.
+══════════════════════════════════════════════════════════════════════════════
+

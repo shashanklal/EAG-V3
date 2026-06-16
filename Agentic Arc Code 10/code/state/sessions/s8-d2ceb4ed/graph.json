@@ -1,0 +1,179 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "skill": "planner",
+      "inputs": [
+        "USER_QUERY"
+      ],
+      "metadata": {},
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "planner",
+        "output": {
+          "rationale": "Use computer skill to open VS Code, create Python file with CSV reading code, and confirm deterministic layer usage.",
+          "nodes": [
+            {
+              "skill": "computer",
+              "inputs": [
+                "USER_QUERY"
+              ],
+              "metadata": {
+                "label": "vscode_task",
+                "task": "vscode_csv_code"
+              }
+            },
+            {
+              "skill": "formatter",
+              "inputs": [
+                "USER_QUERY",
+                "n:vscode_task"
+              ],
+              "metadata": {
+                "label": "out"
+              }
+            }
+          ]
+        },
+        "artifacts": [],
+        "successors": [
+          {
+            "skill": "computer",
+            "inputs": [
+              "USER_QUERY"
+            ],
+            "metadata": {
+              "label": "vscode_task",
+              "task": "vscode_csv_code"
+            }
+          },
+          {
+            "skill": "formatter",
+            "inputs": [
+              "USER_QUERY",
+              "n:vscode_task"
+            ],
+            "metadata": {
+              "label": "out"
+            }
+          }
+        ],
+        "cost": 0.0,
+        "elapsed_s": 6.296337127685547,
+        "provider": "claude_s4",
+        "error": null,
+        "error_code": null
+      },
+      "_result_typed": true,
+      "id": "n:1"
+    },
+    {
+      "skill": "computer",
+      "inputs": [
+        "USER_QUERY"
+      ],
+      "metadata": {
+        "label": "vscode_task",
+        "task": "vscode_csv_code"
+      },
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "computer",
+        "output": {
+          "task": "vscode_csv_code",
+          "title": "VS Code Electron task",
+          "path": "deterministic",
+          "goal": "Open VS Code and type Python CSV-reading code",
+          "snippet": "import csv\n\ndef read_csv(path: str):\n    with open(path, newline='', encoding='utf-8') as f:\n        return list(csv.DictReader(f))\n\nif __name__ == '__main__':\n    rows = read_csv('data.csv')\n    print(f'rows: {len(rows)}')\n",
+          "notes": "Layer 2a deterministic key flow completed",
+          "trajectory_dir": "C:\\Users\\slal5\\OneDrive - UHG\\Work\\4_VSCode\\Agentic Architecture\\Agentic Arc Code 10\\S10Code\\code\\state\\sessions\\s8-d2ceb4ed\\computer\\vscode_csv_code_1781595182\\trajectory",
+          "actions": [
+            {
+              "turn": 1,
+              "tool": "hotkey",
+              "args": {
+                "keys": [
+                  "alt",
+                  "f"
+                ]
+              }
+            },
+            {
+              "turn": 2,
+              "tool": "press_key",
+              "args": {
+                "pid": 34376,
+                "window_id": 135134,
+                "key": "n"
+              }
+            },
+            {
+              "turn": 3,
+              "tool": "type_text",
+              "args": {
+                "pid": 34376,
+                "window_id": 135134,
+                "text": "import csv\n\ndef read_csv(path: str):\n    with open(path, newline='', encoding='utf-8') as f:\n        return list(csv.DictReader(f))\n\nif __name__ == '__main__':\n    rows = read_csv('data.csv')\n    print(f'rows: {len(rows)}')\n"
+              }
+            },
+            {
+              "turn": 4,
+              "tool": "get_window_state",
+              "args": {
+                "pid": 34376,
+                "window_id": 135134,
+                "capture_mode": "ax",
+                "query": "import csv"
+              }
+            }
+          ],
+          "turns": 4
+        },
+        "artifacts": [],
+        "successors": [],
+        "cost": 0.0,
+        "elapsed_s": 1.3720853328704834,
+        "provider": "",
+        "error": null,
+        "error_code": null
+      },
+      "_result_typed": true,
+      "id": "n:2"
+    },
+    {
+      "skill": "formatter",
+      "inputs": [
+        "USER_QUERY",
+        "n:2"
+      ],
+      "metadata": {
+        "label": "out"
+      },
+      "status": "complete",
+      "result": {
+        "success": true,
+        "agent_name": "formatter",
+        "output": {},
+        "artifacts": [],
+        "successors": [],
+        "cost": 0.0,
+        "elapsed_s": 7.324053764343262,
+        "provider": "llama4_mav",
+        "error": null,
+        "error_code": null
+      },
+      "_result_typed": true,
+      "id": "n:3"
+    }
+  ],
+  "edges": [
+    {
+      "source": "n:2",
+      "target": "n:3"
+    }
+  ]
+}
